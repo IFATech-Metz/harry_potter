@@ -1,0 +1,3 @@
+﻿titre : Crockdur 
+description : Crockdur (  Angl.  Fang ) est le chien de Rubeus Hagrid.
+id : 02

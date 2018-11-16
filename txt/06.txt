@@ -1,0 +1,3 @@
+﻿titre : Hedwige
+description : Hedwige (  Angl.  Hedwig ) est la chouette blanche de Harry Potter. Elle lui a été offerte par Rubeus Hagrid pour son onzième anniversaire. Harry l'a baptisée d'après un nom trouvé dans son livre d'histoire de la magie. Elle est morte lors de la bataille des sept Potter frappée par un sortilège de la Mort.
+id : 06

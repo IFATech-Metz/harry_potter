@@ -1,0 +1,218 @@
+@font-face {
+	font-family: "Harry-Potter";
+    src: url("Font/Harry-Potter.ttf.woff") format("woff"), 
+    url("Font/Harry-Potter.ttf.svg") format("svg"), 
+    url("Font/Harry-Potter.ttf.eot") format("eot");
+}
+@font-face {
+    font-family: "ClementineHairLine";
+    src: url("Font/ClementineHairLine/ClementePDaa-Hairline.ttf.woff") format("woff"), 
+    url("Font/ClementineHairLine/ClementePDaa-Hairline.ttf.svg") format("svg"), 
+    url("Font/ClementineHairLine/ClementePDaa-Hairline.ttf.eot") format("eot");
+}
+@font-face {
+    font-family: "ClementineExtraFine";
+    src: url("Font/ClementineExtraFine/ClementePDac-ExtraLight.ttf.woff") format("woff"), 
+    url("Font/ClementineExtraFine/ClementePDac-ExtraLight.ttf.svg") format("svg"), 
+    url("Font/ClementineExtraFine/ClementePDac-ExtraLight.ttf.eot") format("eot");
+}
+@font-face {
+    font-family: "Unquestionaly";
+    src: url("Font/Unquestionly/Unquestionify.ttf.woff") format("woff"), 
+    url("Font/Unquestionly/Unquestionify.ttf.svg") format("svg"), 
+    url("Font/Unquestionly/Unquestionify.ttf.eot") format("eot");
+}
+
+/*/////////////////////////////////// LOGO ///////////////////////////////////////*/
+.Titre {
+    font-family: 'Harry-Potter';
+    text-shadow: 1px 1px 10px black;
+	text-align: center;
+	font-size: 400%;
+    color: aliceblue;
+    margin-bottom: 100px;
+}
+#logo:visited
+{
+    color: aliceblue;
+}
+#logo:hover
+{
+    text-shadow: 5px 5px 70px rgb(37, 121, 231);
+}
+#logo:link
+{
+    text-decoration: none;
+}
+.hp{
+    font-size: 30px;
+    text-shadow:none;
+}
+.hp:hover{
+    color: aliceblue;
+}
+/*///////////////////////////////////////// BODY ///////////////////////////////////////////*/
+
+body{
+    background: linear-gradient(to bottom right , rgb(2, 2, 110),rgb(94, 177, 255)) no-repeat top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: FIXED;
+}
+#text{
+    margin-bottom: 15%;
+    font-family: 'ClementineExtraFine';
+    text-align: justify;
+    font-size: 200%;
+    color: white;
+}
+#htext{
+    margin-top: 500px;
+    margin-bottom: 0%;
+    color: white;
+    font-family: 'ClementineExtraFine';
+    text-align: center;
+    font-size: 150px;
+}
+
+
+
+
+/*/////////////////////////////////////// MENU ////////////////////////////////////////*/
+ul{
+    list-style-type: none;
+}
+
+li{
+    float: left;
+}
+ul li ul{
+    display: none;
+}
+
+li a{
+    display: block;
+    text-align: center;
+    font-family: 'Harry-Potter';
+    font-size: 25px;
+    color: aliceblue;
+    padding: auto;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+
+li a:hover{
+    color: black;
+    background-color: lavender;
+}
+
+ul li:hover ul {
+ display:block;
+ padding: auto;
+ }
+
+li:hover ul li {
+ float: none;
+ }
+
+.Menu{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/*//// Creatures /////*/
+#Table:link{
+    text-decoration: none;
+    text-shadow: 0px 0px 1px black;
+}
+#Table:visited{
+    color: aliceblue;
+    text-decoration: none;
+}
+#Table:hover{
+    text-shadow: 2px 2px 7px rgb(37, 121, 231);
+}
+
+
+
+/*//// Contribuer /////*/
+#Contribute:link{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#Contribute:visited{
+    color: aliceblue;
+}
+#Contribute:hover{
+    text-shadow: 2px 2px 7px rgb(37, 121, 231);
+}
+.id{
+    color: #f2f2f2;
+}
+
+
+/*//// A Propos //////*/
+#AboutUs:link{
+    color: #f2f2f2;
+    text-decoration: none;
+    text-shadow: 0px 0px 1px black;
+}
+#AboutUs:visited{
+    color: aliceblue;
+}
+#AboutUs:hover{
+    text-shadow: 2px 2px 7px rgb(37, 121, 231);
+}
+
+
+
+/*//////////////////////////////////////// TABLE ////////////////////////////////////////*/
+
+table {
+    font-family: "ClementineExtraFine";
+    font-size: 150%;
+    border-collapse: collapse;
+    margin-top: 20%;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    height: 20px;
+    width: 90%;
+    background-color: white;
+    overflow-x: auto;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+td {
+    table-layout: fixed;
+    padding: 20px;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+/*//////////////////////////// FOOTER /////////////////////////////*/
+
+#Copyright{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+    color: white;
+    text-decoration: none;
+}
+
+#up:link{
+    color: aliceblue;
+    text-decoration: none;
+}
+#up:visited{
+    color: white
+}
+#Cup:hover{
+    color: white;
+}

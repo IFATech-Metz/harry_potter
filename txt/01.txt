@@ -1,0 +1,3 @@
+﻿titre : Baron Sanglant 
+description : Le Baron Sanglant (  Angl.  Bloody Baron ) est le fantôme de la maison Serpentard, Son histoire est étroitement liée à celle de la Dame Grise.
+id : 01
