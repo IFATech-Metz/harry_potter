@@ -42,6 +42,8 @@
           </th>
           <th class="table">image
           </th>
+          <th id="modif">Modifier
+          </th>
         </tr>
 <?php
 $rep_txt = "./txt";
@@ -66,7 +68,15 @@ if ($dir_txt = opendir($rep_txt)) {
                 echo "<td>".$value."</td>";
             }
             echo "<td><img src=".$rep_img.'/'.$tableau["id"].".JPG width='100px' ></td>";
-            echo "</tr>";
+            echo '<script>
+              var form = "<form action=\'modif.php\' method=\'post\' value=\'$tableau[id]\'>
+                  Nom<input type=\'text\' name=\'nom\' ><br><br>
+                  Description<input type=\'text\' name=\'description\'><br><br>
+                  </form>";
+              alert(form);
+              </script>\';
+            <img src=\'modif.png\' alt='' height=\'42\' width=\'42\'></button></td></form>;
+            echo "</tr>"';
         }
     }
 }
