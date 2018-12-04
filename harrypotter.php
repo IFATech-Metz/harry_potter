@@ -10,12 +10,12 @@
     <main>
       <header>
         <div class="Titre">
-          <p><a id="logo" href="acceuil.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
+          <p><a id="logo" href="index.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
         </div>
       </header>
       <nav>
       <ul class="Menu">
-        <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
+        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
         <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
           <ul>
             <li><a id="sub" href="#">Ordre Croissant</a><li>
