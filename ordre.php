@@ -66,12 +66,22 @@ if ($dir_txt = opendir($rep_txt)) {
                 }else {
                   echo "<td>" . $value . "</td>";
                 }
+             
+            } 
+            foreach($tableau as $key=>$value){
+                if($key=="titre"){
+                  echo "<td>".$rep_txt.'/'.$tableau["titre"]."</td>";
+                }else{
+                  echo"<td>".$value."</td>";
+                }
                 
-            }  
+            }
             echo "</tr>";
         }
     }
 }
+
+
 ?>
       </table>
       </nav>

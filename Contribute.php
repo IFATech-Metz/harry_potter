@@ -17,14 +17,14 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Créatures</a>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
           <ul>
             <li><a id="sub" href="#">Ordre Croissant</a><li>
             <li><a id="sub" href="#">Ordre Décroissantt</a><li>
           </ul>
         </li>
 
-        <li><a id="Contribute" href="Contribute.php?#htext">Contribuer</a>
+        <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
           <ul>
             <li><a id="sub" href="#">Créer</a><li>
             <li><a id="sub" href="#">Modifier</a><li>
