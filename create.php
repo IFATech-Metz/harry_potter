@@ -1,11 +1,12 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="stylesheet.css" type="text/css" />
   <title>créez votre fiche</title>
 </head>
 <body>
 
-<h1>Ajoutez votre personnage</h1><br>
+<h1 class ="titre">Ajoutez votre personnage</h1><br>
 <form enctype="multipart/form-data" action="create.php" method="post">
       <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
       Transfèrer le fichier : <input type="file" name="monfichier" required/><br><br>
