@@ -25,9 +25,9 @@
 
         <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
           <ul>
-            <li><a id="sub" href="#">Créer</a><li>
-            <li><a id="sub" href="#">Modifier</a><li>
-            <li><a id="sub" href="#">Supprimer</a><li>
+            <li><a id="sub" href="create.php">Créer</a><li>
+            <li><a id="sub" href="modif.php">Modifier</a><li>
+            <li><a id="sub" href="delete.php">Supprimer</a><li>
           </ul>
         </li>
       </ul>
@@ -42,15 +42,20 @@
           </th>
           <th class="table">image
           </th>
+          <th id="modif">Modifier
+          </th>
         </tr>
+
 <?php
 $rep_txt = "./txt";
 $rep_img = "./img";
-$tableau = array();
+
 if ($dir_txt = opendir($rep_txt)) {
+    
     echo "<br>";
     while ($filename = readdir($dir_txt)) {
         if ($filename != "." && $filename != "..") {
+            $tableau = array();
             $path = $rep_txt . "/" . $filename;
             $file = fopen($path, "r");
             while (!feof($file)) {
@@ -61,20 +66,34 @@ if ($dir_txt = opendir($rep_txt)) {
             fclose($file);
             echo "<tr>";
             foreach ($tableau as $key => $value) {
-                echo "<td>" . $value . "</td>";
+                echo "<td>".$value."</td>";
             }
-            echo "<td><img src=" . $rep_img . '/' . $tableau["id"] . ".JPG width='100px' ></td>";
+            echo "<td><img src=".$rep_img.'/'.$tableau["id"].".JPG width='100px' ></td>";
+            echo "<td><input onclick='name' value='modifier' type='submit'</td>";
             echo "</tr>";
         }
     }
 }
 ?>
+<script>
+var name=prompt("Nom :");
+$.ajax(
+{
+    type: "POST",
+    url: "/modif.php",
+    data: name,
+    success: function(data, textStatus, jqXHR)
+    {
+        console.log(data);
+    }
+});
+</script>
       </table>
-      </nav>
     </main>
   </body>
 <footer id="Footer">
 <p id="Copyright">Ont contribués : <cite>GUILLAUME Anais, FALCETTA Nicolas et QEDIRA Fares</cite> (RAN 1-3)</p>
 <a id="up" href="#logo">Haut de Page</a>
 </footer>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </html>
