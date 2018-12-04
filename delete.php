@@ -10,12 +10,12 @@
     <main>
       <header>
         <div class="Titre">
-          <p><a id="logo" href="index.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
+          <p><a id="logo" href="acceuil.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
         </div>
       </header>
       <nav>
       <ul class="Menu">
-        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
+        <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
         <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
           <ul>
             <li><a id="sub" href="#">Ordre Croissant</a><li>
@@ -46,14 +46,23 @@
           </th>
         </tr>
 <?php
+
 $rep_txt = "./txt";
 $rep_img = "./img";
+if (isset($_POST['supp'])){
+                if (file_exists($rep_txt."/".$_POST['supp'].".txt") AND file_exists($rep_img."/".$_POST['supp'].".jpg")){
+                  unlink ($rep_txt."/".$_POST['supp'].".txt");
+                  unlink ($rep_img."/".$_POST['supp'].".jpg");
+                    echo "votre fichier a bien été supprimé";
+                }
+}
 
 if ($dir_txt = opendir($rep_txt)) {
-    $tableau = array();
+    
     echo "<br>";
     while ($filename = readdir($dir_txt)) {
         if ($filename != "." && $filename != "..") {
+            $tableau = array();
             $path = $rep_txt . "/" . $filename;
             $file = fopen($path, "r");
             while (!feof($file)) {
@@ -67,20 +76,12 @@ if ($dir_txt = opendir($rep_txt)) {
                 echo "<td>" . $value . "</td>";
             }
             echo "<td><img src=" . $rep_img . '/' . $tableau["id"] . ".JPG width='100px' ></td>";
-            echo "<form action='delete.php' method='post' name='delete'><td><button type='submit' name='supp'>
+            echo "<form action='delete.php' method='post' name='delete'><td><button type='submit' name='supp' value='$tableau[id]'>
             <img src='del.png' alt='' height='42' width='42'></button></td></form>";
             
             echo "</tr>";
         }
     }
-}
-
-if (isset($_POST['supp'])){
-                if (file_exists($rep_txt."/".$filename) AND file_exists($rep_img."/".$filename)){
-                    unlink($rep_txt."/".$filename);
-                    unlink($rep_img."/".$filename);
-                    echo "votre fichier a bien été supprimé";
-                }
 }
 
 ?>
