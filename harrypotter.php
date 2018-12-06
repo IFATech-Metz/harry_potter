@@ -34,11 +34,11 @@
       </nav>
 <table id="Tableau">
         <tr>
+          <th class="table">ID
+          </th>
           <th class="table">Nom
           </th>
           <th class="table">Description
-          </th>
-          <th class="table">id
           </th>
           <th class="table">image
           </th>
@@ -57,19 +57,21 @@ if ($dir_txt = opendir($rep_txt)) {
             $file = fopen($path, "r");
             while (!feof($file)) {
                 $line                = fgets($file);
-                $separe              = explode(" : ", $line);
-                $tableau[$separe[0]] = $separe[1];
+                $separe              = explode("*%", $line);
+                //$tableau[$separe[0]] = $separe[1];
             }
             fclose($file);
             echo "<tr>";
-            foreach ($tableau as $key => $value) {
+            foreach ($separe as $value) {
                 echo "<td>".$value."</td>";
             }
-            echo "<td><img src=".$rep_img.'/'.$tableau["id"].".JPG width='100px' ></td>";
+            $chemin =$rep_img."/".$separe[0].".JPG";
+            echo "<td><img src='$chemin' width='100px'></td>";
             echo "</tr>";
         }
     }
 }
+
 ?>
       </table>
     </main>
