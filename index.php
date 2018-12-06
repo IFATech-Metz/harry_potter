@@ -26,6 +26,7 @@
         <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
           <ul>
             <li><a id="sub" href="#">Créer</a><li>
+            <li><a id="sub" href="modif.php">Modifier</a><li>
             <li><a id="sub" href="#">Modifier</a><li>
             <li><a id="sub" href="#">Supprimer</a><li>
           </ul>
