@@ -65,7 +65,7 @@ $id = $_POST['id'];
                                 $nomDestination = $_POST['id'].".".$extensionFichier;
                                 if (move_uploaded_file($_FILES["monfichier"]["tmp_name"],$repertoireDestination.$nomDestination)) {    
                                     $text = fopen('./txt/'.$id.'.txt','w');
-                                    $contenu = "titre : ".$beastname."\r\ndescription : ".$desc."\r\nid : ".$id;         
+                                    $contenu = $id."*%".$beastname."*%".$desc;         
                                     fwrite($text,$contenu);                                                              //creation du fichier txt
                                     echo "Votre créature ".$beastname." a bien été ajoutée au catalogue";                //confirmation de l'ajout
                                 }
