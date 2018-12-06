@@ -3,7 +3,7 @@
   <head>
       <meta charset="utf-8"/>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
-    <title>Suppression
+    <title>Creatures des Mondes Magiques
     </title>
   </head>
   <body> 
@@ -26,7 +26,7 @@
         <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
-            <li><a id="sub" href="#">Modifier</a><li>
+            <li><a id="sub" href="modif.php">Modifier</a><li>
             <li><a id="sub" href="delete.php">Supprimer</a><li>
           </ul>
         </li>
@@ -42,19 +42,11 @@
           </th>
           <th class="table">image
           </th>
-          <th id="delete">delete
-          </th>
         </tr>
 <?php
 $rep_txt = "./txt";
 $rep_img = "./img";
-if (isset($_POST['supp'])){
-                if (file_exists($rep_txt."/".$_POST['supp'].".txt") AND file_exists($rep_img."/".$_POST['supp'].".jpg")){
-                  unlink ($rep_txt."/".$_POST['supp'].".txt");
-                  unlink ($rep_img."/".$_POST['supp'].".jpg");
-                    echo "votre créatures a bien été supprimé";
-                }
-}
+
 if ($dir_txt = opendir($rep_txt)) {
     
     echo "<br>";
@@ -71,12 +63,9 @@ if ($dir_txt = opendir($rep_txt)) {
             fclose($file);
             echo "<tr>";
             foreach ($tableau as $key => $value) {
-                echo "<td>" . $value . "</td>";
+                echo "<td>".$value."</td>";
             }
-            echo "<td><img src=" . $rep_img . '/' . $tableau["id"] . ".JPG width='100px' ></td>";
-            echo "<form action='delete.php' method='post' name='delete'><td><button type='submit' name='supp' value='$tableau[id]'>
-            <img src='del.png' alt='' height='42' width='42'></button></td></form>";
-            
+            echo "<td><img src=".$rep_img.'/'.$tableau["id"].".JPG width='100px' ></td>";
             echo "</tr>";
         }
     }
@@ -89,5 +78,4 @@ if ($dir_txt = opendir($rep_txt)) {
 <p id="Copyright">Ont contribués : <cite>GUILLAUME Anais, FALCETTA Nicolas et QEDIRA Fares</cite> (RAN 1-3)</p>
 <a id="up" href="#logo">Haut de Page</a>
 </footer>
-
 </html>
