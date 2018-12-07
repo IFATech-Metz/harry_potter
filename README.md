@@ -13,6 +13,12 @@ Pour pouvoir lire notre projet, vous devez installer premièrement WAMP(PC)/LAMP
 
 # Solution 1 
 Après avoir télechargé notre projet sous le format zip et copiez la racine de harry_potter dans votre localhost créer par le serveur.
-tapez dans votre navigateur , l'adresse suivante : http://localhost/harry_potter/ .
+localhost sur :
+                - PC : C:/wamp64/www/
+                - Mac : User/Applications/Mamp/htdocs/
+
+
+Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost/harry_potter/ .
+
 
 
