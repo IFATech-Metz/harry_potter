@@ -61,7 +61,7 @@ if ($dir_txt = opendir($rep_txt)) {
                 //$tableau[$separe[0]] = $separe[1];
             }
             fclose($file);
-            echo "<form><input <tr>";
+            echo "<tr><type='submit' name='id' value='value' action='./individual.php'>";
             foreach ($separe as $value) {
                 echo "<td>".$value."</td>";
             }

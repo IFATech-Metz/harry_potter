@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+  <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
   <title>créez votre fiche</title>
 </head>
 <body>

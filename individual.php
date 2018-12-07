@@ -35,11 +35,43 @@
       <table>
         <thead>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Id</td>
+                <td>Nom</td>
+                <td>Description</td>
+                <td>Image</td>
             <tr>
-        </thead>
+     </thead>
+        <tbody>
+        <?php
+$rep_txt = "./txt";
+$rep_img = "./img";
+
+if ($dir_txt = opendir($rep_txt)) {
+    
+    echo "<br>";
+    while ($filename = readdir($dir_txt)) {
+        if ($filename != "." && $filename != "..") {
+            $tableau = array();
+            $path = $rep_txt . "/" . $filename;
+            $file = fopen($path, "r");
+            while (!feof($file)) {
+                $line                = fgets($file);
+                $separe              = explode("*%", $line);
+                //$tableau[$separe[0]] = $separe[1];
+            }
+            fclose($file);
+            echo "<tr><type='submit' name='id' value='value' action='./individual.php'>";
+            foreach ($separe as $value) {
+                echo "<td>".$value."</td>";
+            }
+            $chemin =$rep_img."/".$separe[0].".JPG";
+            echo "<td><img src='$chemin' width='100px'></td>";
+            echo "</tr>";
+        }
+    }
+}
+?>
+        </tbody>
       </table>
 
       </body>
