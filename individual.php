@@ -16,12 +16,7 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
-          <ul>
-            <li><a id="" href="#">Ordre Croissant</a><li>
-            <li><a id="" href="#">Ordre Décroissantt</a><li>
-          </ul>
-        </li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
 
         <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
           <ul>
@@ -60,7 +55,7 @@ if ($dir_txt = opendir($rep_txt)) {
                 //$tableau[$separe[0]] = $separe[1];
             }
             fclose($file);
-            echo "<tr><type='submit' name='id' value='value' action='./individual.php'>";
+            echo "<tr>";
             foreach ($separe as $value) {
                 echo "<td>".$value."</td>";
             }

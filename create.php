@@ -11,12 +11,7 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
-          <ul>
-            <li><a id="sub" href="#">Ordre Croissant</a><li>
-            <li><a id="sub" href="#">Ordre Décroissantt</a><li>
-          </ul>
-        </li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
 
         <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
           <ul>

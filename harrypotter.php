@@ -1,6 +1,7 @@
 <!Doctype html>
 <html> 
   <head>
+  <script src="jquery-3.3.1.min.js"></script>
       <meta charset="utf-8"/>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <title>Creatures des Mondes Magiques
@@ -16,12 +17,7 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
-          <ul>
-            <li><a id="sub" href="#">Ordre Croissant</a><li>
-            <li><a id="sub" href="#">Ordre Décroissantt</a><li>
-          </ul>
-        </li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
 
         <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
           <ul>
@@ -44,6 +40,7 @@
           </th>
         </tr>
 <?php
+
 $rep_txt = "./txt";
 $rep_img = "./img";
 
@@ -61,12 +58,12 @@ if ($dir_txt = opendir($rep_txt)) {
                 //$tableau[$separe[0]] = $separe[1];
             }
             fclose($file);
-            echo "<tr><type='submit' name='id' value='value' action='./individual.php'>";
+            echo "<tr>";
             foreach ($separe as $value) {
-                echo "<td>".$value."</td>";
+                echo "<td><a class='tlink' href='individual.php?value=1'>".$value."</a></td>";
             }
             $chemin =$rep_img."/".$separe[0].".JPG";
-            echo "<td><img src='$chemin' width='100px'></td>";
+            echo "<td><a class='tlink' href='individual.php?value=1'><img src='$chemin' width='100px'></a></td>";
             echo "</tr>";
         }
     }

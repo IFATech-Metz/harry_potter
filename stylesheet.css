@@ -81,11 +81,10 @@ body{
 /*/////////////////////////////////////// MENU ////////////////////////////////////////*/
 ul{
     list-style-type: none;
+    display: inline;
 }
 
-li{
-    float: left;
-}
+
 ul li ul{
     display: none;
 }
@@ -103,7 +102,7 @@ li a{
 
 li a:hover{
     color: black;
-    background-color: lavender;
+    background-color: none;
 }
 
 ul li:hover ul {
@@ -118,7 +117,7 @@ li:hover ul li {
 .Menu{
     margin-right: 20px;
     margin-left: 20px;
-    margin-bottom: 20px;
+
 }
 
 /*//// Creatures /////*/
@@ -208,6 +207,15 @@ td {
 tr:nth-child(even){
     background-color: #f2f2f2;
 }
+
+.tlink:link{
+    color: #f2f2f2;
+    text-decoration: none;
+}
+.tlink:visited{
+    color: black;
+}
+
 /*//////////////////////////// FORMULAIRE /////////////////////////////*/
 
 form{

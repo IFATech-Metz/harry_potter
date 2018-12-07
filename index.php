@@ -16,12 +16,7 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
-          <ul>
-            <li><a id="" href="#">Ordre Croissant</a><li>
-            <li><a id="" href="#">Ordre Décroissantt</a><li>
-          </ul>
-        </li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
 
         <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
           <ul>
@@ -30,8 +25,8 @@
 <<<<<<< HEAD
             <li><a id="sub" href="delete.php">Supprimer</a><li>
 =======
-            <li><a id="sub" href="#">Modifier</a><li>
-            <li><a id="sub" href="#">Supprimer</a><li>
+            <li><a id="sub" href="modif.php">Modifier</a><li>
+            <li><a id="sub" href="delete.php">Supprimer</a><li>
 >>>>>>> 576065ce17b3c026a36ae87975f298ff261dacc0
           </ul>
         </li>
