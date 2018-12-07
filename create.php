@@ -7,6 +7,28 @@
 <body>
 
 <h1 class ="titre">Ajoutez votre personnage</h1><br>
+
+      <nav>
+      <ul class="Menu">
+        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
+          <ul>
+            <li><a id="sub" href="#">Ordre Croissant</a><li>
+            <li><a id="sub" href="#">Ordre Décroissantt</a><li>
+          </ul>
+        </li>
+
+        <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
+          <ul>
+            <li><a id="sub" href="create.php">Créer</a><li>
+            <li><a id="sub" href="modif.php">Modifier</a><li>
+            <li><a id="sub" href="delete.php">Supprimer</a><li>
+          </ul>
+        </li>
+      </ul>
+      </nav>
+<br><br><br>
+
 <form enctype="multipart/form-data" action="create.php" method="post">
       <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
       Transfèrer le fichier : <input type="file" name="monfichier" required/><br><br>
@@ -43,7 +65,7 @@ $id = $_POST['id'];
                                 $nomDestination = $_POST['id'].".".$extensionFichier;
                                 if (move_uploaded_file($_FILES["monfichier"]["tmp_name"],$repertoireDestination.$nomDestination)) {    
                                     $text = fopen('./txt/'.$id.'.txt','w');
-                                    $contenu = "titre : ".$beastname."\r\ndescription : ".$desc."\r\nid : ".$id;         
+                                    $contenu = $id."*%".$beastname."*%".$desc;         
                                     fwrite($text,$contenu);                                                              //creation du fichier txt
                                     echo "Votre créature ".$beastname." a bien été ajoutée au catalogue";                //confirmation de l'ajout
                                 }
@@ -56,5 +78,8 @@ $id = $_POST['id'];
     }
 }
 ?>
+
+
+
 </body>
 </html>

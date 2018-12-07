@@ -1,40 +1,5 @@
-<!Doctype html>
-<html> 
-  <head>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
-    <title>Creatures des Mondes Magiques
-    </title>
-  </head>
-  <body> 
-    <main>
-      <header>
-        <div class="Titre">
-          <p>
-            <a id="logo" href="index.php"><span class="hp">Harry Potter</span><br>Magical Creatures
-          </p>
-        </div>
-      </header>
-      <nav>
-      <ul class="Menu">
-        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Créatures</a>
-          <ul>
-            <li><a id="sub" href="#">Ordre Croissant</a><li>
-            <li><a id="sub" href="#">Ordre Décroissantt</a><li>
-          </ul>
-        </li>
++
 
-        <li><a id="Contribute" href="Contribute.php?#htext">Contribuer</a>
-          <ul>
-            <li><a id="sub" href="#">Créer</a><li>
-            <li><a id="sub" href="#">Modifier</a><li>
-            <li><a id="sub" href="#">Supprimer</a><li>
-          </ul>
-        </li>
-      </ul>
-      </nav>
-
-    </main>
     <article>
     <h1 id="htext"> Une idée ? </h1>
     <p id="text">
