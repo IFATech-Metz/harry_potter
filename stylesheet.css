@@ -32,6 +32,11 @@
     color: aliceblue;
     margin-bottom: 100px;
 }
+#logo:link
+{
+    color: aliceblue;
+    text-decoration: none;
+}
 #logo:visited
 {
     color: aliceblue;
@@ -40,13 +45,20 @@
 {
     text-shadow: 5px 5px 70px rgb(37, 121, 231);
 }
-#logo:link
-{
-    text-decoration: none;
-}
+
+
 .hp{
     font-size: 30px;
     text-shadow:none;
+}
+.hp:link
+{
+    color: aliceblue;
+    text-decoration: none;
+}
+.hp:visited
+{
+    color: aliceblue;
 }
 .hp:hover{
     color: aliceblue;
@@ -100,19 +112,48 @@ li a{
     margin-right: 20px; 
 }
 
+li a:link{
+    color: black;
+    background-color: none;
+}
+
+ul li:link ul {
+ display:block;
+ padding: auto;
+ }
+
+li:link ul li {
+ float: none;
+ }
+
+li a:visited{
+    color: black;
+    background-color: none;
+}
+
+ul li:visited ul {
+    display:block;
+    padding: auto;
+}
+
+li:visited ul li {
+    float: none;
+}
+
 li a:hover{
     color: black;
     background-color: none;
 }
 
 ul li:hover ul {
- display:block;
- padding: auto;
- }
+    display:block;
+    padding: auto;
+}
 
 li:hover ul li {
- float: none;
- }
+    float: none;
+}
+
 
 .Menu{
     margin-right: 20px;

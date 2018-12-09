@@ -1,7 +1,6 @@
 <!Doctype html>
 <html> 
   <head>
-  <script src="jquery-3.3.1.min.js"></script>
       <meta charset="utf-8"/>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <title>Creatures des Mondes Magiques
@@ -45,8 +44,7 @@ $rep_txt = "./txt";
 $rep_img = "./img";
 
 if ($dir_txt = opendir($rep_txt)) {
-    
-    echo "<br>";
+
     while ($filename = readdir($dir_txt)) {
         if ($filename != "." && $filename != "..") {
             $tableau = array();
@@ -58,12 +56,13 @@ if ($dir_txt = opendir($rep_txt)) {
                 //$tableau[$separe[0]] = $separe[1];
             }
             fclose($file);
+            $id = $separe[0];
             echo "<tr>";
             foreach ($separe as $value) {
-                echo "<td><a class='tlink' href='individual.php?value=1'>".$value."</a></td>";
+                echo "<td><a class='tlink' href='individual.php?creature=$id#Table'>" . $value . "</a></td>";
             }
-            $chemin =$rep_img."/".$separe[0].".JPG";
-            echo "<td><a class='tlink' href='individual.php?value=1'><img src='$chemin' width='100px'></a></td>";
+            $chemin =$rep_img."/".$id.".jpg";
+            echo "<td><a class='tlink' href='individual.php?creature=$id#Table'.><img src='$chemin' width='100px'></a></td>";
             echo "</tr>";
         }
     }

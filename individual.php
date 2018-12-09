@@ -28,45 +28,32 @@
       </ul>
       </nav>
       <table>
-        <thead>
-            <tr>
-                <td>Id</td>
-                <td>Nom</td>
-                <td>Description</td>
-                <td>Image</td>
-            <tr>
-     </thead>
         <tbody>
-        <?php
+<?php
+$id = $_GET['creature'];
 $rep_txt = "./txt";
 $rep_img = "./img";
+$chemin =$rep_img."/".$id.".jpg";
 
-if ($dir_txt = opendir($rep_txt)) {
-    
-    echo "<br>";
-    while ($filename = readdir($dir_txt)) {
-        if ($filename != "." && $filename != "..") {
-            $tableau = array();
-            $path = $rep_txt . "/" . $filename;
-            $file = fopen($path, "r");
-            while (!feof($file)) {
-                $line                = fgets($file);
-                $separe              = explode("*%", $line);
-                //$tableau[$separe[0]] = $separe[1];
-            }
-            fclose($file);
-            echo "<tr>";
-            foreach ($separe as $value) {
-                echo "<td>".$value."</td>";
-            }
-            $chemin =$rep_img."/".$separe[0].".JPG";
-            echo "<td><img src='$chemin' width='100px'></td>";
-            echo "</tr>";
-        }
-    }
+$file = fopen($rep_txt."/".$id.".txt","r") or die("Erreur de l'ouverture du fichier texte");
+
+while(($line = fgets($file)) != false) {
+    $colonne = explode('*%',$line);
+
+    echo "<tr>";
+    echo "<td class='Table'>". $colonne[1]."</td>";
+    echo "</tr>";
+
+    echo "<tr>";
+    echo "<td class='Table'>". $colonne[2]."</td>";
+    echo "</tr>";
+
+    echo "<tr>";
+    echo "<td><center><img src='$chemin' width='200px'><center></td>";
+    echo "</tr>";
 }
+
 ?>
         </tbody>
       </table>
-
-      </body>
+  </body>

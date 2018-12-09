@@ -22,12 +22,7 @@
           <ul>
             <li><a id="sub" href="create.php">Creer</a><li>
             <li><a id="sub" href="modif.php">Modifier</a><li>
-<<<<<<< HEAD
             <li><a id="sub" href="delete.php">Supprimer</a><li>
-=======
-            <li><a id="sub" href="modif.php">Modifier</a><li>
-            <li><a id="sub" href="delete.php">Supprimer</a><li>
->>>>>>> 576065ce17b3c026a36ae87975f298ff261dacc0
           </ul>
         </li>
       </ul>
