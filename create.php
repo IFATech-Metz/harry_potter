@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css" />
   <title>créez votre fiche</title>
 </head>
 <body>
@@ -10,7 +10,7 @@
 
       <nav>
       <ul class="Menu">
-        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
+        <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
         <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
 
         <li><a id="Contribute">Gestion</a>
@@ -60,7 +60,7 @@ $id = $_POST['id'];
                                 $nomDestination = $_POST['id'].".".$extensionFichier;
                                 if (move_uploaded_file($_FILES["monfichier"]["tmp_name"],$repertoireDestination.$nomDestination)) {    
                                     $text = fopen('./txt/'.$id.'.txt','w');
-                                    $contenu = $id."*%".$beastname."*%".$desc;         
+                                    $contenu = "titre : ".$beastname."\r\ndescription : ".$desc."\r\nid : ".$id;         
                                     fwrite($text,$contenu);                                                              //creation du fichier txt
                                     echo "Votre créature ".$beastname." a bien été ajoutée au catalogue";                //confirmation de l'ajout
                                 }
@@ -73,5 +73,5 @@ $id = $_POST['id'];
     }
 }
 ?>
-
 </body>
+</html>

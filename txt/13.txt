@@ -1,0 +1,3 @@
+﻿titre : Bucks
+description : Buck (  Angl.  Buckbeak ) est un hippogriffe. Il vécut avec Rubeus Hagrid ainsi qu'avec beaucoup d'autres hippogriffes, mais fut plus tard condamné à mort. Après avoir échappé à l'exécution en 1994, il fut mis aux soins de Sirius Black. Après la mort de Sirius, Buck fut redonné à Rubeus Hagrid et renommé Ventdebout (  Angl.  Witherwings ) pour sa sécurité.
+id : 13
