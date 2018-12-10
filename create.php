@@ -1,6 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
   <link rel="stylesheet" href="stylesheet.css" type="text/css" />
   <title>créez votre fiche</title>
 </head>
