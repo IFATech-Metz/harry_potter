@@ -17,15 +17,10 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-<<<<<<< HEAD
-        <li><a id="Table" href="harrypotter.php?#Tableau">Créatures</a></li>
-        <li>Gestion
-=======
         <li><a id="Table" href="harrypotter.php?#Tableau">Créatures</a>
         </li>
 
         <li><a id="Contribute">Gestion</a>
->>>>>>> 55365a946484c7f4b1fab888516b3af56eb00198
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
             <li><a id="sub" href="modif.php">Modifier</a><li>
@@ -34,17 +29,21 @@
         </li>
       </ul>
       </nav>
-<<<<<<< HEAD
-
     </main>
-    
-
-<h1>Modifiez votre créature</h1>
-
-<form action="modif.php" method="post" name="modif">
-
-  modifiez une créature <select name="id" required >
-  <?php
+    <table>
+      <tr>
+          <th class="table">ID
+          </th>
+          <th class="table">Nom
+          </th>
+          <th class="table">Description
+          </th>
+          <th class="table">image
+          </th>
+          <th id="modif">Modifier
+          </th>
+        </tr>
+<?php
     
     $rep_txt = "./txt";
     $rep_img = "./img";
@@ -52,37 +51,13 @@
      if ($dir_txt = opendir($rep_txt)) {
       echo "<br>";
      while ($filename = readdir($dir_txt)) {
-=======
-        <table id="Tableau">
-            <tr>
-                <th class="table">ID
-                </th>
-                <th class="table">Nom
-                </th>
-                <th class="table">Description
-                </th>
-                <th class="table">image
-                </th>
-                <th id="modif">Modifier
-                </th>
-            </tr>
-
-<?php
-$rep_txt = "./txt";
-$rep_img = "./img";
-
-if ($dir_txt = opendir($rep_txt)) {
-    
-    echo "<br>";
-    while ($filename = readdir($dir_txt)) {
->>>>>>> 55365a946484c7f4b1fab888516b3af56eb00198
         if ($filename != "." && $filename != "..") {
             $tableau = array();
             $path = $rep_txt . "/" . $filename;
             $file = fopen($path, "r");
             while (!feof($file)) {
-                $line                = fgets($file);
-                $separe              = explode("*%", $line);
+                $line = fgets($file);
+                $separe = explode("*%", $line);
                 //$tableau[$separe[0]] = $separe[1];
             }
             fclose($file);
