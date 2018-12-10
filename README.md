@@ -19,9 +19,9 @@ video tutoriel installation
 Après avoir télechargé notre projet sous le format zip et copiez la racine de harry_potter dans votre localhost créer par le serveur.
 localhost sur :
 
-- PC : ```/c/user/my_project```
-- Mac : ```/Users/user/application/mamp/my_project```
-- Linux : ```/home/user/my_project```
+- PC : ```C:\wamp\www``
+- Mac : ```/Application/MAMP/htdocs```
+- Linux : ```/var/www/```
 
 
 Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost/harry_potter/ .
@@ -38,7 +38,7 @@ $ git clone https://github.com/IFATech-Metz/harry_potter
 
 - Mac :
 ```
-$ cd /Users/user/my_project
+$ cd /Applications/MAMP/htdocs
 $ git clone https://github.com/IFATech-Metz/harry_potter
 ```
 
