@@ -58,9 +58,11 @@ if ($dir_txt = opendir($rep_txt)) {
             fclose($file);
             $id = $separe[0];
             echo "<tr>";
-            foreach ($separe as $value) {
-                echo "<td><a class='tlink' href='individual.php?creature=$id#Table'>" . $value . "</a></td>";
-            }
+            if ($separe[3] == 1){
+              for ($i=0; $i <3 ; $i++) { 
+                echo "<td>".$separe[$i]."</td>";
+              }
+
             $chemin =$rep_img."/".$id.".jpg";
             echo "<td><a class='tlink' href='individual.php?creature=$id#Table'.><img src='$chemin' width='100px'></a></td>";
             echo "</tr>";
