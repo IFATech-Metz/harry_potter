@@ -41,12 +41,26 @@ $id = $_GET['creature'];
 $rep_txt = "./txt";
 $rep_img = "./img";
 $chemin = $rep_img . "/" . $id . ".jpg";
+$colonne = explode('*%', $line);
+        
+if (isset($_POST['mod'])){
 
-    $file = fopen($rep_txt . "/" . $id . ".txt", "r") or die("Erreur de l'ouverture du fichier texte");
+    $filetxt=fopen($rep_txt."/". $id.".txt","w");
+    $holder=$colonne[0]."*%".$_POST['nom']."*%".$_POST["description"]."*%1";  
+    fwrite($filetxt,$holder);
+    echo "votre créature".$colonne[1]." à bien été modifier";
+    fclose($filetxt);
+    
+}
+
+  $file = fopen($rep_txt . "/" . $id . ".txt", "r") or die("Erreur de l'ouverture du fichier texte");
 
     while (($line = fgets($file)) != false) {
         $colonne = explode('*%', $line);
+        
 
+
+    
         echo "<tr>";
         echo "<td class='Table'>" . $colonne[1] . "</td>";
         echo "<td class='Table'>" . $colonne[2] . "</td>";
@@ -54,16 +68,15 @@ $chemin = $rep_img . "/" . $id . ".jpg";
         echo "</tr>";
 
         echo "<tr>";
-        echo "<form name='modify-form' action='modif.php' id='modif-form'><td class='Table'><center><textarea name='nom' form='modif-form' rows='5' cols='15'>".$colonne[1]."</textarea><center></td>";
+        echo "<form name='modify-form' action='modify-form.php?creature=$_GET[creature]'id='modif-form'method=POST><td class='Table'><center><textarea name='nom' form='modif-form' rows='5' cols='15'>".$colonne[1]."</textarea><center></td>";
         echo "<td class='Table'><center><textarea name='description' form='modif-form' width='50px' rows='5' cols='100'>".$colonne[2]."</textarea><center></td>";
-        echo "<td class='Table'><center><input type='button' class='button' value='Enregistrer les Modifications'><center></form></td>";
+        echo "<td class='Table'><center><input type='submit' name='mod' class='button' value='Enregistrer les Modifications'><center></form></td>";
         echo "</tr>";
         
 }
 
 
 
-if(isset())
 ?>
     </table>
 </main>
