@@ -34,7 +34,7 @@ Ouvrez votre Terminal (Linux/Mac) ou Powershell (Windows) :
 
 - Linux :
 ```
-$ cd /home/user/my_project
+$ cd /var/www/
 $ git clone https://github.com/IFATech-Metz/harry_potter
 ```
 
@@ -46,7 +46,7 @@ $ git clone https://github.com/IFATech-Metz/harry_potter
 
 - Windows :
 ```
-$ cd /c/user/my_project
+$ cd C:\wamp\www
 $ git clone https://github.com/IFATech-Metz/harry_potter
 ```
 
