@@ -22,7 +22,7 @@
         <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
-            <li><a id="sub" href="#">Modifier</a><li>
+            <li><a id="sub" href="modif.php">Modifier</a><li>
             <li><a id="sub" href="delete.php">Supprimer</a><li>
           </ul>
         </li>
@@ -30,11 +30,11 @@
       </nav>
 <table id="Tableau">
         <tr>
+        <th class="table">id
+          </th>
           <th class="table">Nom
           </th>
           <th class="table">Description
-          </th>
-          <th class="table">id
           </th>
           <th class="table">image
           </th>
@@ -68,12 +68,14 @@ if ($dir_txt = opendir($rep_txt)) {
 
             $id = $separe[0];
             echo "<tr>";
-            foreach ($separe as $value) {
-                echo "<td>" . $value . "</td>";
-            }
+            if ($separe[3] == 1){
+              for ($i=0; $i <3 ; $i++) { 
+                echo "<td><a class='tlink' href='individual.php?creature=$separe[0]#Table'>".$separe[$i]."</a></td>";
+              }
             echo "<td><img src=" . $rep_img . '/' . $id . ".JPG width='100px' ></td>";
             echo "<form action='delete.php' method='post' name='delete'><td><button class='button1' type='submit' name='supp' value='$id'><img src='delete.png' alt='' height='42' width='42'></button></td></form>";
             echo "</tr>";
+            }
         }
     }
 }

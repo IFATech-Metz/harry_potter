@@ -28,6 +28,18 @@
       </ul>
       </nav>
       <table>
+      <thead>
+      <tr>
+          <th class="table">ID
+          </th>
+          <th class="table">Nom
+          </th>
+          <th class="table">Description
+          </th>
+          <th class="table">image
+          </th>
+        </tr>
+      </thead>
         <tbody>
 <?php
 $id = $_GET['creature'];
@@ -39,12 +51,10 @@ $file = fopen($rep_txt."/".$id.".txt","r") or die("Erreur de l'ouverture du fich
 
 while(($line = fgets($file)) != false) {
     $colonne = explode('*%',$line);
+    echo "<tr>";
 for($i = 0; $i <= 2; $i++){
-    echo "<tr>";
     echo "<td class='Table'>". $colonne[$i]."</td>";
-    echo "</tr>";
   }
-    echo "<tr>";
     echo "<td><center><img src='$chemin' width='200px'><center></td>";
     echo "</tr>";
 }

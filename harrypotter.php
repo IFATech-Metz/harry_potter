@@ -59,11 +59,11 @@ if ($dir_txt = opendir($rep_txt)) {
             echo "<tr>";
             if ($separe[3] == 1){
               for ($i=0; $i <3 ; $i++) { 
-                echo "<td><a class='tlink' href='individual.php?creature=$separe[0]'>".$separe[$i]."</a></td>";
+                echo "<td><a class='tlink' href='individual.php?creature=$separe[0]#Table'>".$separe[$i]."</a></td>";
               }
 
               $chemin =$rep_img."/".$separe[0].".JPG";
-              echo "<td><a class='tlink' href='individual.php?creature=$separe[0]'><img src='$chemin' width='100px'></a></td>";
+              echo "<td><a class='tlink' href='individual.php?creature=$separe[0]#Table'><img src='$chemin' width='100px'></a></td>";
               echo "</tr>";
           }
         }

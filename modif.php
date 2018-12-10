@@ -39,7 +39,7 @@
                 </th>
                 <th class="table">image
                 </th>
-                <th class="table">Modifier
+                <th id="modif">Modifier
                 </th>
             </tr>
 
