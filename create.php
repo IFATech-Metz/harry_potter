@@ -24,14 +24,23 @@
       </nav>
 <br><br><br>
 
+<center>
 <form enctype="multipart/form-data" action="create.php" method="post">
       <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-      Transfèrer le fichier : <input type="file" name="monfichier" required/><br><br>
+
+      <label>Transfèrer une image :<p></label> 
+      <input type="file" name="monfichier" required/><br><br>
+
       <!-- Index du fichier : <input type="number" name="id" min="01" required><br><br> -->
-      Nom de votre créature : <input type="text" name="nom" required><br><br>
-      Description : <br><textarea name="desc" cols="50" rows="10" required></textarea><br><br>
+      <label>Nom de votre créature :</label> 
+      <input type="text" name="nom" required><br><br>
+
+      <label>Description :</label><br>
+      <textarea name="desc" cols="50" rows="10" required></textarea><br><br>
+      
       <input type="submit" name="submit1" value="upload"/>
 </form>
+</center>
 <?php
 
 if (isset($_POST["submit1"])) {
