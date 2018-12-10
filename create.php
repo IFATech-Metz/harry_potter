@@ -11,27 +11,36 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Creature</a>
         </li>
-        <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
+        <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
-            <li><a id="sub" href="modif.php">Modifier</a><li>
-            <li><a id="sub" href="delete.php">Supprimer</a><li>
+            <li><a id="sub" href="modif.php#Tableau">Modifier</a><li>
+            <li><a id="sub" href="delete.php#Tableau">Supprimer</a><li>
           </ul>
         </li>
       </ul>
       </nav>
 <br><br><br>
 
+<center>
 <form enctype="multipart/form-data" action="create.php" method="post">
       <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-      Transfèrer le fichier : <input type="file" name="monfichier" required/><br><br>
+
+      <label>Transfèrer une image :<p></label> 
+      <input type="file" name="monfichier" required/><br><br>
+
       <!-- Index du fichier : <input type="number" name="id" min="01" required><br><br> -->
-      Nom de votre créature : <input type="text" name="nom" required><br><br>
-      Description : <br><textarea name="desc" cols="50" rows="10" required></textarea><br><br>
+      <label>Nom de votre créature :</label> 
+      <input type="text" name="nom" required><br><br>
+
+      <label>Description :</label><br>
+      <textarea name="desc" cols="50" rows="10" required></textarea><br><br>
+      
       <input type="submit" name="submit1" value="upload"/>
 </form>
+</center>
 <?php
 
 if (isset($_POST["submit1"])) {
