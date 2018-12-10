@@ -44,7 +44,6 @@
 <?php
 $rep_txt = "./txt";
 $rep_img = "./img";
-$chemin = $rep_img . "/" . $id . ".jpg";
 
         if ($dir_txt = opendir($rep_txt)) {
 
@@ -60,6 +59,7 @@ $chemin = $rep_img . "/" . $id . ".jpg";
                     }
                     fclose($file);
                     $id = $separe[0];
+                    $chemin = $rep_img . "/" . $id . ".jpg";
                     echo "<tr>";
                     foreach ($separe as $value) {
                         echo "<td><a class='tlink' href='modify-form.php?creature=$id#Table'>" . $value . "</a></td>";
