@@ -276,8 +276,13 @@ tr:nth-child(even){
 
 form{
     margin-top: 100px;
+    font-family: "ClementineExtraFine";
 }
-
+p label{
+    font-family: "ClementineExtraFine";
+    color: aliceblue;
+    font-size: 150%
+}
 /*//////////////////////////// FOOTER /////////////////////////////*/
 
 #Copyright{
