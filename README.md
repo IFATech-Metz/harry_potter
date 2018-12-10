@@ -29,17 +29,17 @@ Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost/harr
 
 # Solution 2
 
-ouvrez votre Terminal (Linux/Mac) ou Powershell (Windows) :
+Ouvrez votre Terminal (Linux/Mac) ou Powershell (Windows) :
 
-Linux :
+- Linux :
 $ cd /home/user/my_project
 $ git clone https://github.com/IFATech-Metz/harry_potter
 
-Mac :
+- Mac :
 $ cd /Users/user/my_project
 $ git clone https://github.com/IFATech-Metz/harry_potter
 
-Windows :
+- Windows :
 $ cd /c/user/my_project
 $ git clone https://github.com/IFATech-Metz/harry_potter
 
