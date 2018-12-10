@@ -18,7 +18,7 @@
         <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
         <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
 
-        <li><a id="Contribute">Gestion</a>
+        <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
             <li><a id="sub" href="modif.php">Modifier</a><li>
@@ -29,22 +29,22 @@
       </nav>
 <table id="Tableau">
         <tr>
-          <th class="table">ID
-          </th>
           <th class="table">Nom
           </th>
           <th class="table">Description
+          </th>
+          <th class="table">id
           </th>
           <th class="table">image
           </th>
         </tr>
 <?php
-
 $rep_txt = "./txt";
 $rep_img = "./img";
 
 if ($dir_txt = opendir($rep_txt)) {
-
+    
+    echo "<br>";
     while ($filename = readdir($dir_txt)) {
         if ($filename != "." && $filename != "..") {
             $tableau = array();
@@ -52,24 +52,19 @@ if ($dir_txt = opendir($rep_txt)) {
             $file = fopen($path, "r");
             while (!feof($file)) {
                 $line                = fgets($file);
-                $separe              = explode("*%", $line);
-                //$tableau[$separe[0]] = $separe[1];
+                $separe              = explode(" : ", $line);
+                $tableau[$separe[0]] = $separe[1];
             }
             fclose($file);
-            $id = $separe[0];
             echo "<tr>";
-            if ($separe[3] == 1){
-              for ($i=0; $i <3 ; $i++) { 
-                echo "<td>".$separe[$i]."</td>";
-              }
-
-            $chemin =$rep_img."/".$id.".jpg";
+            foreach ($tableau as $key => $value) {
+                echo "<td><a class='tlink' href='individual.php?creature=$id#Table'.>".$value."</a></td>";
+            }
             echo "<td><a class='tlink' href='individual.php?creature=$id#Table'.><img src='$chemin' width='100px'></a></td>";
             echo "</tr>";
         }
     }
 }
-
 ?>
       </table>
     </main>
