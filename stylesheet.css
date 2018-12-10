@@ -32,6 +32,11 @@
     color: aliceblue;
     margin-bottom: 100px;
 }
+#logo:link
+{
+    color: aliceblue;
+    text-decoration: none;
+}
 #logo:visited
 {
     color: aliceblue;
@@ -40,13 +45,20 @@
 {
     text-shadow: 5px 5px 70px rgb(37, 121, 231);
 }
-#logo:link
-{
-    text-decoration: none;
-}
+
+
 .hp{
     font-size: 30px;
     text-shadow:none;
+}
+.hp:link
+{
+    color: aliceblue;
+    text-decoration: none;
+}
+.hp:visited
+{
+    color: aliceblue;
 }
 .hp:hover{
     color: aliceblue;
@@ -81,11 +93,10 @@ body{
 /*/////////////////////////////////////// MENU ////////////////////////////////////////*/
 ul{
     list-style-type: none;
+    display: inline;
 }
 
-li{
-    float: left;
-}
+
 ul li ul{
     display: none;
 }
@@ -101,24 +112,53 @@ li a{
     margin-right: 20px; 
 }
 
-li a:hover{
+li a:link{
     color: black;
-    background-color: lavender;
+    background-color: none;
 }
 
-ul li:hover ul {
+ul li:link ul {
  display:block;
  padding: auto;
  }
 
-li:hover ul li {
+li:link ul li {
  float: none;
  }
+
+li a:visited{
+    color: black;
+    background-color: none;
+}
+
+ul li:visited ul {
+    display:block;
+    padding: auto;
+}
+
+li:visited ul li {
+    float: none;
+}
+
+li a:hover{
+    color: black;
+    background-color: none;
+}
+
+ul li:hover ul {
+    display:block;
+    padding: auto;
+}
+
+li:hover ul li {
+    float: none;
+}
+
 
 .Menu{
     margin-right: 20px;
     margin-left: 20px;
-    margin-bottom: 20px;
+
 }
 
 /*//// Creatures /////*/
@@ -152,7 +192,21 @@ li:hover ul li {
     color: #f2f2f2;
 }
 
+/*//// Modif.php /////*/
 
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
 /*//// A Propos //////*/
 #AboutUs:link{
     color: #f2f2f2;
@@ -201,6 +255,7 @@ th{
     background-color:blue;
     color: white;
 }
+
 td {
     table-layout: fixed;
     padding: 20px;
@@ -208,6 +263,15 @@ td {
 tr:nth-child(even){
     background-color: #f2f2f2;
 }
+
+.tlink:link{
+    color: black;
+    text-decoration: none;
+}
+.tlink:visited{
+    color: black;
+}
+
 /*//////////////////////////// FORMULAIRE /////////////////////////////*/
 
 form{

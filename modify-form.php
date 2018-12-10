@@ -10,15 +10,15 @@
 <main>
     <header>
         <div class="Titre">
-            <p><a id="logo" href="acceuil.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
+            <p><a id="logo" href="index.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
         </div>
     </header>
     <nav>
         <ul class="Menu">
-            <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
+            <li><a id="AboutUs" href="index.php">Acceuil</a></li>
             <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
 
-            <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
+            <li><a id="Contribute">Gestion</a>
                 <ul>
                     <li><a id="sub" href="create.php">Créer</a><li>
                     <li><a id="sub" href="modif.php">Modifier</a><li>
@@ -37,18 +37,17 @@
             </th>
         </tr>
 <?php
+
 $id = $_GET['creature'];
 $rep_txt = "./txt";
 $rep_img = "./img";
 $chemin = $rep_img . "/" . $id . ".jpg";
 
-if(isset($id)) {
-
     $file = fopen($rep_txt . "/" . $id . ".txt", "r") or die("Erreur de l'ouverture du fichier texte");
-
+    
     while (($line = fgets($file)) != false) {
         $colonne = explode('*%', $line);
-
+    ço;ki_u
         echo "<tr>";
         echo "<td class='Table'>" . $colonne[1] . "</td>";
         echo "<td class='Table'>" . $colonne[2] . "</td>";
@@ -56,12 +55,13 @@ if(isset($id)) {
         echo "</tr>";
 
         echo "<tr>";
-        echo "<td class='Table'><form type='text' action='modif.php' value=".$colonne[1]."></form></td>";
-        echo "<td class='Table'><form type='text' action='modif.php' value=".$colonne[2]."></form></td>";
-        echo "<td class='Table'><form type='submit'></form></td>";
+        echo "<form action='modif.php' id='modif-form'></form><td class='Table'><center><textarea name='nom' form='modif-form' rows='5' cols='15'>".$colonne[1]."</textarea><center></td>";
+        echo "<td class='Table'><center><textarea name='description' form='modif-form' width='50px' rows='5' cols='100'>".$colonne[2]."</textarea><center></td>";
+        echo "<td class='Table'><center><input type='button' class='button' value='Enregistrer les Modifications'><center></td>";
         echo "</tr>";
-
     }
+    
+   $filetxt=fwrite($file)
 }
 ?>
     </table>

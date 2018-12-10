@@ -11,8 +11,9 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Créatures</a></li>
-        <li>Gestion
+        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
+        </li>
+        <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
             <li><a id="sub" href="modif.php">Modifier</a><li>
@@ -26,11 +27,11 @@
 <form enctype="multipart/form-data" action="create.php" method="post">
       <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
       Transfèrer le fichier : <input type="file" name="monfichier" required/><br><br>
-      Index du fichier : <input type="number" name="id" required><br><br>
+      <!-- Index du fichier : <input type="number" name="id" min="01" required><br><br> -->
       Nom de votre créature : <input type="text" name="nom" required><br><br>
       Description : <br><textarea name="desc" cols="50" rows="10" required></textarea><br><br>
       <input type="submit" name="submit1" value="upload"/>
-    </form>
+</form>
 <?php
 
 if (isset($_POST["submit1"])) {
@@ -38,10 +39,12 @@ $nomOrigine = $_FILES['monfichier']['name'];
 $elementsChemin = pathinfo($nomOrigine);
 $extensionFichier = $elementsChemin['extension'];
 $extensionsAutorisees = array("jpeg", "jpg",);
-$filename = './img/'.$_POST['id'].'.jpg';
+$count = count(glob("txt/*.txt"));
+$id = $count + 1;
+$filename = './img/'.$id.'.jpg';
 $beastname = $_POST['nom'];
 $desc = $_POST['desc'];
-$id = $_POST['id'];
+
 
 // si le fichier existe dans le dossier img 
     if (file_exists($filename)){
@@ -56,10 +59,10 @@ $id = $_POST['id'];
         }
         else { // Copie dans le repertoire img avec un nom                                
                                 $repertoireDestination = dirname(__FILE__)."/img/";
-                                $nomDestination = $_POST['id'].".".$extensionFichier;
+                                $nomDestination = $id.".".$extensionFichier;
                                 if (move_uploaded_file($_FILES["monfichier"]["tmp_name"],$repertoireDestination.$nomDestination)) {    
                                     $text = fopen('./txt/'.$id.'.txt','w');
-                                    $contenu = $id."*%".$beastname."*%".$desc;         
+                                    $contenu = $id."*%".$beastname."*%".$desc."*%1";         
                                     fwrite($text,$contenu);                                                              //creation du fichier txt
                                     echo "Votre créature ".$beastname." a bien été ajoutée au catalogue";                //confirmation de l'ajout
                                 }
@@ -72,8 +75,6 @@ $id = $_POST['id'];
     }
 }
 ?>
-
-
 
 </body>
 </html>
