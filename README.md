@@ -19,7 +19,7 @@ video tutoriel installation
 Après avoir télechargé notre projet sous le format zip et copiez la racine de harry_potter dans votre localhost créer par le serveur.
 localhost sur :
 
-- PC : ```C:\wamp\www``
+- PC : ```C:\wamp\www```
 - Mac : ```/Application/MAMP/htdocs```
 - Linux : ```/var/www/```
 
