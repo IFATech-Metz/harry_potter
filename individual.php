@@ -39,11 +39,15 @@ $file = fopen($rep_txt."/".$id.".txt","r") or die("Erreur de l'ouverture du fich
 
 while(($line = fgets($file)) != false) {
     $colonne = explode('*%',$line);
-for($i = 0; $i <= 2; $i++){
+
     echo "<tr>";
-    echo "<td class='Table'>". $colonne[$i]."</td>";
+    echo "<td class='Table'>". $colonne[1]."</td>";
     echo "</tr>";
-  }
+
+    echo "<tr>";
+    echo "<td class='Table'>". $colonne[2]."</td>";
+    echo "</tr>";
+
     echo "<tr>";
     echo "<td><center><img src='$chemin' width='200px'><center></td>";
     echo "</tr>";
