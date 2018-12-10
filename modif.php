@@ -17,20 +17,20 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Créatures</a>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Creatures</a>
         </li>
 
         <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
-            <li><a id="sub" href="modif.php">Modifier</a><li>
-            <li><a id="sub" href="delete.php">Supprimer</a><li>
+            <li><a id="sub" href="modif.php#Tableau">Modifier</a><li>
+            <li><a id="sub" href="delete.php#Tableau">Supprimer</a><li>
           </ul>
         </li>
       </ul>
       </nav>
     </main>
-    <table>
+    <table id="Tableau">
       <tr>
           <th class="table">ID
           </th>
