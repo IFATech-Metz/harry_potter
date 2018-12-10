@@ -26,7 +26,7 @@ localhost sur :
 - Linux : ```/var/www/```
 
 
-Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost/harry_potter/ .
+Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost:8888/harry_potter/ .
 
 # Solution 2
 
@@ -50,5 +50,5 @@ $ cd C:\wamp\www
 $ git clone https://github.com/IFATech-Metz/harry_potter
 ```
 
-Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost/harry_potter/ .
+Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost:8888/harry_potter/ .
 
