@@ -56,11 +56,11 @@ if(isset($id)) {
         echo "</tr>";
 
         echo "<tr>";
-        echo "<td class='Table'><form type='text' action='modif.php' value=".$colonne[1]."></form></td>";
-        echo "<td class='Table'><form type='text' action='modif.php' value=".$colonne[2]."></form></td>";
-        echo "<td class='Table'><form type='submit'></form></td>";
+        echo "<form action='modif.php' id='modif-form'></form><td class='Table'><center><textarea name='nom' form='modif-form' rows='5' cols='15'>".$colonne[1]."</textarea><center></td>";
+        echo "<td class='Table'><center><textarea name='description' form='modif-form' width='50px' rows='5' cols='100'>".$colonne[2]."</textarea><center></td>";
+        echo "<td class='Table'><center><input type='button' class='button' value='Enregistrer les Modifications'><center></td>";
         echo "</tr>";
-
+        
     }
 }
 ?>
