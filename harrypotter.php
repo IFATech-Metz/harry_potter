@@ -10,12 +10,12 @@
     <main>
       <header>
         <div class="Titre">
-          <p><a id="logo" href="acceuil.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
+          <p><a id="logo" href="index.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
         </div>
       </header>
       <nav>
       <ul class="Menu">
-        <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
+        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
         <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
           <ul>
             <li><a id="sub" href="#">Ordre Croissant</a><li>
@@ -62,12 +62,15 @@ if ($dir_txt = opendir($rep_txt)) {
             }
             fclose($file);
             echo "<tr>";
-            foreach ($separe as $value) {
-                echo "<td>".$value."</td>";
-            }
-            $chemin =$rep_img."/".$separe[0].".JPG";
-            echo "<td><img src='$chemin' width='100px'></td>";
-            echo "</tr>";
+            if ($separe[3] == 1){
+              for ($i=0; $i <3 ; $i++) { 
+                echo "<td>".$separe[$i]."</td>";
+              }
+
+              $chemin =$rep_img."/".$separe[0].".JPG";
+              echo "<td><a href='details.php?creat=$separe[0]'><img src='$chemin' width='100px'></a></td>";
+              echo "</tr>";
+          }
         }
     }
 }
