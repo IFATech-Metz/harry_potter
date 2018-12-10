@@ -25,7 +25,7 @@ localhost sur :
 - Linux : ```/home/user/my_project```
 
 
-Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost/harry_potter/ .
+Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost:8888/harry_potter/ .
 
 # Solution 2
 
@@ -49,5 +49,5 @@ $ cd /c/user/my_project
 $ git clone https://github.com/IFATech-Metz/harry_potter
 ```
 
-Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost/harry_potter/ .
+Tapez ensuite dans votre navigateur , l'adresse suivante : http://localhost:8888/harry_potter/ .
 
