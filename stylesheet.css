@@ -115,7 +115,11 @@ li:hover ul li {
  float: none;
  }
 
-
+.Menu{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
 
 /*//// Creatures /////*/
 #Table:link{
@@ -185,12 +189,29 @@ th{
     background-color: #4CAF50;
     color: white;
 }
+#delete{
+    text-align: left;
+    padding: 5px;
+    background-color:red;
+    color: white;
+}
+#modif{
+    text-align: left;
+    padding: 5px;
+    background-color:blue;
+    color: white;
+}
 td {
     table-layout: fixed;
     padding: 20px;
 }
 tr:nth-child(even){
     background-color: #f2f2f2;
+}
+/*//////////////////////////// FORMULAIRE /////////////////////////////*/
+
+form{
+    margin-top: 100px;
 }
 
 /*//////////////////////////// FOOTER /////////////////////////////*/

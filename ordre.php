@@ -57,6 +57,7 @@ if ($dir_txt = opendir($rep_txt)) {
                 $line                = fgets($file);
                 $separe              = explode(" : ", $line);
                 $tableau[$separe[0]] = $separe[1];
+                asort($tableau);
             }
             fclose($file);
             echo "<tr>";
@@ -65,22 +66,12 @@ if ($dir_txt = opendir($rep_txt)) {
                   echo "<td><img src=" . $rep_img . '/' . $tableau["image"] . " width='100px'></td>"; 
                 }else {
                   echo "<td>" . $value . "</td>";
-                }
-             
+                } 
             } 
-            foreach($tableau as $key=>$value){
-                if($key=="titre"){
-                  echo "<td>".$rep_txt.'/'.$tableau["titre"]."</td>";
-                }else{
-                  echo"<td>".$value."</td>";
-                }
-                
-            }
             echo "</tr>";
         }
     }
 }
-
 
 ?>
       </table>

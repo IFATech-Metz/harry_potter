@@ -16,7 +16,6 @@
       </header>
       <nav>
       <ul class="Menu">
-<<<<<<< HEAD
         <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
         <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
           <ul>

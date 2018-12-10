@@ -9,19 +9,19 @@
     <main>
       <header>
         <div class="Titre">
-          <p><a id="logo" href="index.php"><span class="hp">Harry Potter</span><br>Magical Creatures
+          <p><a id="logo" href="acceuil.php"><span class="hp">Harry Potter</span><br>Magical Creatures
           </p>
         </div>
       </header>
       <nav>
       <ul class="Menu">
-        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">créatures</a>
+        <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Créatures</a></li>
         <li>Gestion
           <ul>
-            <li><a id="sub" href="create.php">Creer</a><li>
-            <li><a id="sub" href="modif.php">Modifier</a><li>
-            <li><a id="sub" href="delete.php">Supprimer</a><li>
+            <li><a id="sub" href="#">Créer</a><li>
+            <li><a id="sub" href="#">Modifier</a><li>
+            <li><a id="sub" href="#">Supprimer</a><li>
           </ul>
         </li>
       </ul>
@@ -35,7 +35,6 @@ C'est à partir de ces évènements que Harry va découvrir la vérité sur ses 
 les animaux les plus magiques, les plus fantastiques du monde magique. Mais aussi les plus dangereuses. Durant tous c'est année de soclarité à Pollard harry en affronta pas de c'est creatures qui nous fascine tant c'est jours-ci tel que les vampires, des araignée géante, des starangulos.... Je vous presente un catalogue harry potter ou vous pouvez ajouter, supprimer, modifier, a votre guise. Dans ce catalogue vous pouvez 
 mettre autant de creature magique que vous aimer supprimer ceux donc vous ne desirait point qui vous repugne.
 Harry Potter, un monde magique incontournable par les jeunes comme par les adultes.</p>
-    
       </nav>
     </main>
   </body>

@@ -1,3 +1,1 @@
-﻿titre : Patrick Delaney
-description : Sir Patrick Delaney-Podmore est un fantôme qui s'occupe du club des Chasseurs sans tête. Il refuse que Sir Nicholas de Mimsy-Porpington participe au club car sa tête est encore rattachée à son corps par un centimètre de chair.
-id : 12
+12*%Patrick Delaney*%Sir Patrick Delaney-Podmore est un fantôme qui s'occupe du club des Chasseurs sans tête. Il refuse que Sir Nicholas de Mimsy-Porpington participe au club car sa tête est encore rattachée à son corps par un centimètre de chair.

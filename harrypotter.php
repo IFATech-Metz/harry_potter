@@ -3,7 +3,7 @@
   <head>
       <meta charset="utf-8"/>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
-    <title>Suppression
+    <title>Creatures des Mondes Magiques
     </title>
   </head>
   <body> 
@@ -20,7 +20,7 @@
         <li>Gestion
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
-            <li><a id="sub" href="#">Modifier</a><li>
+            <li><a id="sub" href="modif.php">Modifier</a><li>
             <li><a id="sub" href="delete.php">Supprimer</a><li>
           </ul>
         </li>
@@ -28,60 +28,44 @@
       </nav>
 <table id="Tableau">
         <tr>
+          <th class="table">ID
+          </th>
           <th class="table">Nom
           </th>
           <th class="table">Description
           </th>
-          <th class="table">id
-          </th>
           <th class="table">image
-          </th>
-          <th id="delete">delete
           </th>
         </tr>
 <?php
 $rep_txt = "./txt";
 $rep_img = "./img";
-/*if (isset($_POST['supp'])){
-                if (file_exists($rep_txt."/".$_POST['supp'].".txt") AND file_exists($rep_img."/".$_POST['supp'].".jpg")){
-                  unlink ($rep_txt."/".$_POST['supp'].".txt");
-                  unlink ($rep_img."/".$_POST['supp'].".jpg");
-                    echo "votre créatures a bien été supprimé";
-                }
-}*/
+
 if ($dir_txt = opendir($rep_txt)) {
     
     echo "<br>";
     while ($filename = readdir($dir_txt)) {
         if ($filename != "." && $filename != "..") {
-            $tableau = array();
+           //$tableau = array();
             $path = $rep_txt . "/" . $filename;
             $file = fopen($path, "r");
             while (!feof($file)) {
                 $line                = fgets($file);
-                $separe              = explode(" : ", $line);
-               // $tableau[$separe[0]] = $separe[1];
+                $separe              = explode("*%", $line);
+                //$tableau[$separe[0]] = $separe[1];
             }
             fclose($file);
             echo "<tr>";
-            foreach ($tableau as $key => $value) {
-                echo "<td>" . $value . "</td>";
+            foreach ($separe as $value) {
+                echo "<td>".$value."</td>";
             }
             $chemin =$rep_img."/".$separe[0].".JPG";
-            if (isset($_POST['supp'])){
-              if (file_exists($rep_txt."/".$_POST['supp'].".txt") AND file_exists($rep_img."/".$_POST['supp'].".jpg")){
-                unlink ($rep_txt."/".$_POST['supp'].".txt");
-                unlink ($rep_img."/".$_POST['supp'].".jpg");
-                  echo "votre créatures a bien été supprimé";
-              }
-}
-         echo"<form action='delete.php' method='post' name='delete'><td><button type='submit' name='supp' value='$separe[0]'>
-            <img src='del.png' alt='' height='42' width='42'></button></td></form>";
-            
+            echo "<td><img src='$chemin' width='100px'></td>";
             echo "</tr>";
         }
     }
 }
+
 ?>
       </table>
     </main>
@@ -90,5 +74,4 @@ if ($dir_txt = opendir($rep_txt)) {
 <p id="Copyright">Ont contribués : <cite>GUILLAUME Anais, FALCETTA Nicolas et QEDIRA Fares</cite> (RAN 1-3)</p>
 <a id="up" href="#logo">Haut de Page</a>
 </footer>
-
 </html>

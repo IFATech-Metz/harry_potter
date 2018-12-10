@@ -1,7 +1,6 @@
 <!Doctype html>
 <html> 
   <head>
-      <meta charset="utf-8"/>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <title>Creatures des Mondes Magiques
     </title>
@@ -10,20 +9,16 @@
     <main>
       <header>
         <div class="Titre">
-          <p><a id="logo" href="acceuil.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
+          <p>
+            <a id="logo" href="index.php"><span class="hp">Harry Potter</span><br>Magical Creatures
+          </p>
         </div>
       </header>
       <nav>
       <ul class="Menu">
-        <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
-          <ul>
-            <li><a id="sub" href="#">Ordre Croissant</a><li>
-            <li><a id="sub" href="#">Ordre Décroissantt</a><li>
-          </ul>
-        </li>
-
-        <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
+        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Créatures</a></li>
+        <li>Gestion
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
             <li><a id="sub" href="modif.php">Modifier</a><li>
@@ -32,60 +27,66 @@
         </li>
       </ul>
       </nav>
-<table id="Tableau">
-        <tr>
-          <th class="table">Nom
-          </th>
-          <th class="table">Description
-          </th>
-          <th class="table">id
-          </th>
-          <th class="table">image
-          </th>
-          <th id="modif">Modifier
-          </th>
-        </tr>
-<?php
-$rep_txt = "./txt";
-$rep_img = "./img";
 
-if ($dir_txt = opendir($rep_txt)) {
+    </main>
     
-    echo "<br>";
-    while ($filename = readdir($dir_txt)) {
+
+<h1>Modifiez votre créature</h1>
+
+<form action="modif.php" method="post" name="modif">
+
+  modifiez une créature <select name="id" required >
+
+    <?php
+    
+    $rep_txt = "./txt";
+    $rep_img = "./img";
+    
+     if ($dir_txt = opendir($rep_txt)) {
+      echo "<br>";
+     while ($filename = readdir($dir_txt)) {
         if ($filename != "." && $filename != "..") {
             $tableau = array();
             $path = $rep_txt . "/" . $filename;
             $file = fopen($path, "r");
-            while (!feof($file)) {
-                $line                = fgets($file);
-                $separe              = explode(" : ", $line);
-                $tableau[$separe[0]] = $separe[1];
+            $fichier=str_replace(".txt.","", $filename);
+            if isset($_POST[$fichier]){
+              $dir=$rep_txt."/".$fichier.".txt";
+              $path_txt=fopen($dir,"r");
             }
-            fclose($file);
+            while (!feof($path_txt)) {
+                $line                = fgets($path_txt);
+                $separe              = explode("*%", $line);
+                //$tableau[$separe[0]] = $separe[1];
+            }   
+
+            /*fclose($file);
             echo "<tr>";
-            foreach ($tableau as $key => $value) {
+            foreach ($separe as $value) {
                 echo "<td>".$value."</td>";
-            }
-            echo "<td><img src=".$rep_img.'/'.$tableau["id"].".JPG width='100px' ></td>";
-            echo '<script>
-              var form = "<form action=\'modif.php\' method=\'post\' value=\'$tableau[id]\'>
-                  Nom<input type=\'text\' name=\'nom\' ><br><br>
-                  Description<input type=\'text\' name=\'description\'><br><br>
-                  </form>";
-              alert(form);
-              </script>\';
-            <img src=\'modif.png\' alt='' height=\'42\' width=\'42\'></button></td></form>;
+            }*/
+            $chemin =$rep_img."/".$separe[0].".JPG";
+            echo "<td><img src='$chemin' width='100px'></td>";
             echo "</tr>";
+            echo "<form action='modif.php' method='post' name='edit'><td><button type='submit' name='edit' value='$separe[0]'>
+            <img src='edit.jpg' alt='' height='42' width='42'></button></td></form>";
+            
         }
     }
 }
-?>
-      </table>
-    </main>
-  </body>
-<footer id="Footer">
-<p id="Copyright">Ont contribués : <cite>GUILLAUME Anais, FALCETTA Nicolas et QEDIRA Fares</cite> (RAN 1-3)</p>
-<a id="up" href="#logo">Haut de Page</a>
-</footer>
+<div>
+ <p class='add'>vous modifiez la fich de <?php echo $separe[0]?></p><br>
+ <form class="add"> action="modif.php" method="POST">
+<div class= 'left'>ID:<br>
+   <input type='text' class='input' name =''<?php echo $separe[0]?><br>
+</div>
+<div class ='left'>Titre:<br>
+   <input type='text' class='textInput'name='titre' value="<?php echo $separe[1]?>"><br>
+</div>
+<div class ='center'>Description :<br>
+<input type ='text' class='textInput'name="description" value ="<?php echo $separe[2]?>"><br>
+</div>
+<div>Nowimage:<br>
+<img src="<?php echo $rep_img."/".$separe[0].".jpg"?>" height='42'>
+</body>
 </html>
