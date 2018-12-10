@@ -1,3 +1,5 @@
+![Alt text](https://labiblioblogdemaelle.files.wordpress.com/2017/12/harry_potter_logo_text.png)
+
 # Les étranges créatures d'Harry Potter
 Répertoire de notre projet "Les étranges créatures d'Harry Potter" dans le cadre de la mise à niveau du numérique à l'IFA de METZ
 Sous la direction de M.AYED Nizar, nous devions créer un site, qui catalogue des produits sur le thème de notre choix avec des fonctions de gestion, tel que la modification, la suppression ou encore meme la création . 
