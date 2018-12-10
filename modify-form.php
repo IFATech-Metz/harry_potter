@@ -42,8 +42,6 @@ $rep_txt = "./txt";
 $rep_img = "./img";
 $chemin = $rep_img . "/" . $id . ".jpg";
 
-if(isset($id)) {
-
     $file = fopen($rep_txt . "/" . $id . ".txt", "r") or die("Erreur de l'ouverture du fichier texte");
 
     while (($line = fgets($file)) != false) {
@@ -56,13 +54,16 @@ if(isset($id)) {
         echo "</tr>";
 
         echo "<tr>";
-        echo "<form action='modif.php' id='modif-form'></form><td class='Table'><center><textarea name='nom' form='modif-form' rows='5' cols='15'>".$colonne[1]."</textarea><center></td>";
+        echo "<form name='modify-form' action='modif.php' id='modif-form'><td class='Table'><center><textarea name='nom' form='modif-form' rows='5' cols='15'>".$colonne[1]."</textarea><center></td>";
         echo "<td class='Table'><center><textarea name='description' form='modif-form' width='50px' rows='5' cols='100'>".$colonne[2]."</textarea><center></td>";
-        echo "<td class='Table'><center><input type='button' class='button' value='Enregistrer les Modifications'><center></td>";
+        echo "<td class='Table'><center><input type='button' class='button' value='Enregistrer les Modifications'><center></form></td>";
         echo "</tr>";
         
-    }
 }
+
+
+
+if(isset())
 ?>
     </table>
 </main>

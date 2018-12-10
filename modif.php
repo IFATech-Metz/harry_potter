@@ -29,16 +29,21 @@
         </li>
       </ul>
       </nav>
-
     </main>
-    
-
-<h1>Modifiez votre créature</h1>
-
-<form action="modif.php" method="post" name="modif">
-
-  modifiez une créature <select name="id" required >
-  <?php
+    <table>
+      <tr>
+          <th class="table">ID
+          </th>
+          <th class="table">Nom
+          </th>
+          <th class="table">Description
+          </th>
+          <th class="table">image
+          </th>
+          <th id="modif">Modifier
+          </th>
+        </tr>
+<?php
     
     $rep_txt = "./txt";
     $rep_img = "./img";
@@ -51,8 +56,8 @@
             $path = $rep_txt . "/" . $filename;
             $file = fopen($path, "r");
             while (!feof($file)) {
-                $line                = fgets($file);
-                $separe              = explode("*%", $line);
+                $line = fgets($file);
+                $separe = explode("*%", $line);
                 //$tableau[$separe[0]] = $separe[1];
             }
             fclose($file);

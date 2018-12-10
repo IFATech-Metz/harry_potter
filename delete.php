@@ -38,7 +38,7 @@
           </th>
           <th class="table">image
           </th>
-          <th id="delete">delete
+          <th id="delete">Supprimer
           </th>
         </tr>
 <?php
