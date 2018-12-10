@@ -1,3 +1,1 @@
-﻿titre : Moine gras
-description : Le Moine Gras (  Angl.  Fat Friar ), aussi appelé Gros Moine ou Gros moine,[3] est le surnom donné au fantôme de la maison Poufsouffle à Poudlard.
-id : 09
+09*%Moine gras*% Le Moine Gras (  Angl.  Fat Friar ), aussi appelé Gros Moine ou Gros moine,[3] est le surnom donné au fantôme de la maison Poufsouffle à Poudlard.*%1
