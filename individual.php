@@ -18,7 +18,7 @@
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
         <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
 
-        <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
+        <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Creer</a><li>
             <li><a id="sub" href="modif.php">Modifier</a><li>

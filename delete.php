@@ -19,7 +19,7 @@
         <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
         </li>
 
-        <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
+        <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
             <li><a id="sub" href="#">Modifier</a><li>
