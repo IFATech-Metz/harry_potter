@@ -10,12 +10,12 @@
     <main>
       <header>
         <div class="Titre">
-          <p><a id="logo" href="acceuil.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
+          <p><a id="logo" href="index.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
         </div>
       </header>
       <nav>
       <ul class="Menu">
-        <li><a id="AboutUs" href="acceuil.php">Acceuil</a></li>
+        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
         <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
 
         <li><a id="Contribute">Gestion</a>
@@ -29,11 +29,11 @@
       </nav>
 <table id="Tableau">
         <tr>
+          <th class="table">ID
+          </th>
           <th class="table">Nom
           </th>
           <th class="table">Description
-          </th>
-          <th class="table">id
           </th>
           <th class="table">image
           </th>
@@ -52,19 +52,24 @@ if ($dir_txt = opendir($rep_txt)) {
             $file = fopen($path, "r");
             while (!feof($file)) {
                 $line                = fgets($file);
-                $separe              = explode(" : ", $line);
-                $tableau[$separe[0]] = $separe[1];
+                $separe              = explode("*%", $line);
+                //$tableau[$separe[0]] = $separe[1];
             }
             fclose($file);
             echo "<tr>";
-            foreach ($tableau as $key => $value) {
-                echo "<td><a class='tlink' href='individual.php?creature=$id#Table'.>".$value."</a></td>";
-            }
-            echo "<td><a class='tlink' href='individual.php?creature=$id#Table'.><img src='$chemin' width='100px'></a></td>";
-            echo "</tr>";
+            if ($separe[3] == 1){
+              for ($i=0; $i <3 ; $i++) { 
+                echo "<td><a class='tlink' href='individual.php?creature=$separe[0]'>".$separe[$i]."</a></td>";
+              }
+
+              $chemin =$rep_img."/".$separe[0].".JPG";
+              echo "<td><a class='tlink' href='individual.php?creature=$separe[0]'><img src='$chemin' width='100px'></a></td>";
+              echo "</tr>";
+          }
         }
     }
 }
+
 ?>
       </table>
     </main>
