@@ -69,7 +69,7 @@
 
               $chemin =$rep_img."/".$separe[0].".JPG";
               echo "<td><img src='$chemin' width='100px'></td>";
-              echo "<td><a class='tlink' href='modify-form.php?creature=$separe[0]#Table'><img src='./modifier.png' width='42px'></td>";
+              echo "<td><a class='tlink' href='modify-form.php?creature=$separe[0]#Tableau'><img src='./modifier.png' width='42px'></td>";
               echo "</tr>";
           }
         }
