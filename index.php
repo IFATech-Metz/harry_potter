@@ -2,8 +2,8 @@
 <html> 
   <head>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
-    <title>Creatures des Mondes Magiques
-    </title>
+    <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
+    <title>Creatures des Mondes Magiques</title>
   </head>
   <body> 
     <main>
@@ -16,18 +16,18 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
-
+        <li><a id="Table" href="harrypotter.php?#Tableau">Creatures</a>
         <li><a id="Contribute">Gestion</a>
           <ul>
-            <li><a id="sub" href="create.php">Creer</a><li>
-            <li><a id="sub" href="modif.php">Modifier</a><li>
-            <li><a id="sub" href="delete.php">Supprimer</a><li>
+            <li><a id="sub" href="create.php">Créer</a><li>
+            <li><a id="sub" href="modif.php#Tableau">Modifier</a><li>
+            <li><a id="sub" href="delete.php#Tableau">Supprimer</a><li>
           </ul>
         </li>
       </ul>
       </nav>
-      <p id="text"> Quand Harry Potter était bébé, un personnage méchant et cruel avait le pouvoir sur les sorciers. C'était l'affreux V... euh...Voldemort. Peu de gens osent prononcer son nom ! Il tua Lily et James Potter, les parents de Harry. Mais quand il essaya de tuer celui-ci, il perdit ses pouvoirs et se volatilisa. Harry garda alors pour toujours sur le front une cicatrice en forme d'éclair, seule trace du mauvais sort lancé contre lui. Des personnages étranges déposèrent l'orphelin sur le perron des Dursley (son oncle, sa tante et son cousin) qui étaient des simples "Moldus", c'est-à-dire des gens dépourvus de pouvoirs magiques. Ces derniers, pendant onze ans, cachèrent à Harry qu'il était du monde des sorciers et ils lui racontèrent que ses parents avaient été tués par un accident de voiture.
+      <p id="text">
+      Quand Harry Potter était bébé, un personnage méchant et cruel avait le pouvoir sur les sorciers. C'était l'affreux V... euh...Voldemort. Peu de gens osent prononcer son nom ! Il tua Lily et James Potter, les parents de Harry. Mais quand il essaya de tuer celui-ci, il perdit ses pouvoirs et se volatilisa. Harry garda alors pour toujours sur le front une cicatrice en forme d'éclair, seule trace du mauvais sort lancé contre lui. Des personnages étranges déposèrent l'orphelin sur le perron des Dursley (son oncle, sa tante et son cousin) qui étaient des simples "Moldus", c'est-à-dire des gens dépourvus de pouvoirs magiques. Ces derniers, pendant onze ans, cachèrent à Harry qu'il était du monde des sorciers et ils lui racontèrent que ses parents avaient été tués par un accident de voiture.
 
 Un jour, Harry reçut une lettre. Mais l'oncle Vernon la lui arracha des mains. Harry entendit alors ce dernier et la tante Pétunia marmonner des phrases comme : "Que faut-il faire ? Leur répondre ? Leur dire que nous ne voulons pas..." Le lendemain, une autre lettre arriva. Vernon les détruisit. Les mystérieux expéditeurs envoyèrent alors de plus en plus de lettres.
 

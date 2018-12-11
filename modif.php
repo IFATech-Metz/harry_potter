@@ -1,6 +1,7 @@
 <!Doctype html>
 <html> 
   <head>
+  <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <title>Creatures des Mondes Magiques
     </title>
@@ -62,18 +63,20 @@
             }
             fclose($file);
             echo "<tr>";
-            if ($separe[2]==1){
-              for ($i=0; $i <=2 ; $i++) { 
+            if ($separe[3] == 1){
+              for ($i=0; $i <3 ; $i++) { 
                 echo "<td>".$separe[$i]."</td>";
               }
+
               $chemin =$rep_img."/".$separe[0].".JPG";
               echo "<td><img src='$chemin' width='100px'></td>";
-              echo "<td><a class='tlink' href='modify-form.php?creature=$separe[0]#Table'><img src='./modifier.png' width='42px'></td>";
+              echo "<td><a class='tlink' href='modify-form.php?creature=$separe[0]#Tableau'><img src='./modifier.png' width='42px'></td>";
               echo "</tr>";
           }
         }
     }
 }
+
 ?>
         </table>
     </main>

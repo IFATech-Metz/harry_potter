@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+    <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <title>Creatures des Mondes Magiques
     </title>
@@ -37,14 +38,15 @@
             </th>
         </tr>
 <?php
+
 $id = $_GET['creature'];
 $rep_txt = "./txt";
 $rep_img = "./img";
 $chemin = $rep_img . "/" . $id . ".jpg";
+$file = fopen($rep_txt . "/" . $id . ".txt", "r") or die("Erreur de l'ouverture du fichier texte");
 
-     $file= fopen($rep_txt . "/" . $id . ".txt", "r") or die("Erreur de l'ouverture du fichier texte");
-     while (($line = fgets($file)) != false) {
-     $colonne= explode('*%', $line);
+    while (($line = fgets($file)) != false) {
+        $colonne = explode('*%', $line);
     
         echo "<tr>";
         echo "<td class='Table'>" . $colonne[1] . "</td>";
@@ -58,21 +60,9 @@ $chemin = $rep_img . "/" . $id . ".jpg";
         echo "<td class='Table'><center><input type='submit' name='mod' class='button' value='Enregistrer les Modifications'><center></form></td>";
         echo "</tr>";
         
-
-if (isset($_POST['mod'])){
-
-    $filetxt=fopen($rep_txt."/". $id.".txt","w");
-    $holder= $separe[0]."*%".$_POST['nom']."*%".$_POST['description']."*%1";  
-    fwrite($filetxt,$holder);
-    echo "votre créature".$_POST['nom']." à bien été modifier";
-    fclose($filetxt);
-    
-    $image= $rep_img."/".$id.".jpg";
-      if ($image=="jpg")
-      
-    
-  }
 }
+
+
 
 ?>
     </table>

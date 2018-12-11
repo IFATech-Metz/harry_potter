@@ -2,6 +2,7 @@
 <html> 
   <head>
       <meta charset="utf-8"/>
+      <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <title>Suppression
     </title>
@@ -16,14 +17,14 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Creatures</a>
         </li>
 
         <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
-            <li><a id="sub" href="modif.php">Modifier</a><li>
-            <li><a id="sub" href="delete.php">Supprimer</a><li>
+            <li><a id="sub" href="modif.php#Tableau">Modifier</a><li>
+            <li><a id="sub" href="delete.php#Tableau">Supprimer</a><li>
           </ul>
         </li>
       </ul>
@@ -38,7 +39,7 @@
           </th>
           <th class="table">image
           </th>
-          <th id="delete">delete
+          <th id="delete">Supprimer
           </th>
         </tr>
 <?php
