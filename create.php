@@ -66,7 +66,7 @@ $desc = $_POST['desc'];
         if (!(in_array($extensionFichier, $extensionsAutorisees))) {
                                 echo "<script>
                                     window.onload = function(){
-                                      alert('Erreur Extension Attendue JPG ou JPEG');
+                                      alert('ERREUR Extension Image Attendue JPG');
                                     }
                                   </script>";
         }
