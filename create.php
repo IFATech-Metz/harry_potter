@@ -6,7 +6,6 @@
   <title>créez votre fiche</title>
 </head>
 <body>
-
 <h1 class ="titre">Ajoutez votre personnage</h1><br>
 
       <nav>
