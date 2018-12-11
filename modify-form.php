@@ -12,7 +12,7 @@
 
       <nav>
       <ul class="Menu">
-        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
+        <li><a id="AboutUs" href="index.php">Accueil</a></li>
         <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
         </li>
         <li><a id="Contribute" >Gestion</a>
