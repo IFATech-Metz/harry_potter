@@ -74,12 +74,19 @@ $desc = $_POST['desc'];
                                     $text = fopen('./txt/'.$id.'.txt','w');
                                     $contenu = $id."*%".$beastname."*%".$desc."*%1";         
                                     fwrite($text,$contenu);                                                              //creation du fichier txt
-                                    echo "Votre créature ".$beastname." a bien été ajoutée au catalogue";                //confirmation de l'ajout
+                                    echo "<script>
+                                    window.onload = function(){
+                                      alert('La création à bien été effectuée');
+                                    }
+                                  </script>";                //confirmation de l'ajout
                                 }
                                 else {
-                                    echo "Le fichier n'a pas été uploadé (trop gros ?) ou ".
-                                            "Le déplacement du fichier temporaire a échoué".
-                                            " vérifiez l'existence du répertoire ".$repertoireDestination;
+                                    echo "<script>
+                                    window.onload = function(){
+                                      alert('Le fichier n'a pas été uploadé (trop gros ?) ou le déplacement du fichier temporaire a échoué, vérifiez l'existence du répertoire');
+                                    }
+                                  </script>";
+                                   
                                 }
         }
     }
