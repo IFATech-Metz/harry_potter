@@ -76,7 +76,7 @@ $desc = $_POST['desc'];
                                     fwrite($text,$contenu);                                                              //creation du fichier txt
                                     echo "<script>
                                     window.onload = function(){
-                                      alert('La modification à bien été effectuée .');
+                                      alert('La création à bien été effectuée .');
                                     }
                                   </script>";                //confirmation de l'ajout
                                 }
