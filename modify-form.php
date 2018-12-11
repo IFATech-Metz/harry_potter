@@ -63,7 +63,7 @@ if(isset($_POST["modif"])){
             <tr>
                 <td><?php echo $separe[1]; ?></td>
                 <td><?php echo $separe[2]; ?></td>
-                <td><center><?php echo "<img src='img/$separe[0].jpg' widht='300px' height='300px'>" ?></center></td>
+                <td><center><?php echo "<img src='img/$separe[0].jpg' width='300px' height='300px'>" ?></center></td>
             </tr>
             <tr>
                 <form action="modify-form.php?creat=<?php echo $_GET['creat'];?>#Tableau" method=post>
