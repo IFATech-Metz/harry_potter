@@ -31,8 +31,8 @@ $rep_img = "./img/";
 if(isset($_POST["modif"])){
     $path = $rep_txt.$_GET["creat"].".txt";
     $id = $_POST["id"];
-    $nom = str_replace(array("\r\n", "\n", "\r"), " ", $_POST['nom']);
-    $description = str_replace(array("\r\n", "\n", "\r"), " ", $_POST['description']);
+    $nom = str_replace(array("\r\n", "\n", "\r", "<", ">"), " ", $_POST['nom']);
+    $description = str_replace(array("\r\n", "\n", "\r", "<", ">"), " ", $_POST['description']);
     $file = fopen($path,"w");
     $contenu = $id."*%".$nom."*%".$description."*%1";
     fwrite($file,$contenu);
