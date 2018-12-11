@@ -33,8 +33,8 @@ if(isset($_POST["modif"])){
     $id = $_POST["id"];
     $htmlavoidnom = htmlentities($_POST['nom']);
     $htmlavoiddesc = htmlentities($_POST['description']);
-    $nom = str_replace(array("\r\n", "\n", "\r", "<", ">"), " ", $htmlavoidnom);
-    $description = str_replace(array("\r\n", "\n", "\r", "<", ">"), " ", $htmlavoiddesc);
+    $nom = str_replace(array("\r\n", "\n", "\r", "<", ">", "</"), " ", $htmlavoidnom);
+    $description = str_replace(array("\r\n", "\n", "\r", "<", ">", "</"), " ", $htmlavoiddesc);
     $file = fopen($path,"w");
     $contenu = $id."*%".$nom."*%".$description."*%1";
     fwrite($file,$contenu);
