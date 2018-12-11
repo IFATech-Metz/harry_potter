@@ -52,7 +52,11 @@ if (isset($_POST['supp'])){
                   $view = fopen($rep_txt."/".$_POST['supp'].".txt","a");
                   $separe[3]=0;
                   fputs($view,$separe[3]);
-                  echo "votre créatures a bien été supprimée";
+                  echo "<script>
+                  window.onload = function(){
+                    alert('La suppression à bien été effectuée .');
+                  }
+                </script>" ;
                 }
                 fclose($view);
 }
