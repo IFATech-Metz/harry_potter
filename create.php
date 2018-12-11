@@ -44,8 +44,7 @@
 <?php
 
 if (isset($_POST["submit1"])) {
-str_replace("\n",' 
-',$_POST['desc']); 
+$htmlavoid =  htmlentities($_POST['desc']);
 $nomOrigine = $_FILES['monfichier']['name'];
 $elementsChemin = pathinfo($nomOrigine);
 $extensionFichier = $elementsChemin['extension'];
@@ -54,7 +53,7 @@ $count = count(glob("txt/*.txt"));
 $id = $count + 1;
 $filename = './img/'.$id.'.jpg';
 $beastname = $_POST['nom'];
-$desc = str_replace(array("\r\n", "\n", "\r"), " ", $_POST['desc']);
+$desc = str_replace(array("\r\n", "\n", "\r"), " ", $htmlavoid);
 
 
 // si le fichier existe dans le dossier img 
