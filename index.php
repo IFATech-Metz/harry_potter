@@ -2,8 +2,8 @@
 <html> 
   <head>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
-    <title>Creatures des Mondes Magiques
-    </title>
+    <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
+    <title>Creatures des Mondes Magiques</title>
   </head>
   <body> 
     <main>

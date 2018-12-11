@@ -2,6 +2,7 @@
 <html> 
   <head>
       <meta charset="utf-8"/>
+      <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <title>Creatures des Mondes Magiques
     </title>
@@ -16,13 +17,13 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
-        </li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Creatures</a></li>
+
         <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
-            <li><a id="sub" href="modif.php">Modifier</a><li>
-            <li><a id="sub" href="delete.php">Supprimer</a><li>
+            <li><a id="sub" href="modif.php#Tableau">Modifier</a><li>
+            <li><a id="sub" href="delete.php#Tableau">Supprimer</a><li>
           </ul>
         </li>
       </ul>
@@ -44,7 +45,6 @@ $rep_img = "./img";
 
 if ($dir_txt = opendir($rep_txt)) {
     
-    echo "<br>";
     while ($filename = readdir($dir_txt)) {
         if ($filename != "." && $filename != "..") {
             $tableau = array();
@@ -59,11 +59,11 @@ if ($dir_txt = opendir($rep_txt)) {
             echo "<tr>";
             if ($separe[3] == 1){
               for ($i=0; $i <3 ; $i++) { 
-                echo "<td>".$separe[$i]."</td>";
+                echo "<td><a class='tlink' href='individual.php?creature=$separe[0]#Table'>".$separe[$i]."</a></td>";
               }
 
               $chemin =$rep_img."/".$separe[0].".JPG";
-              echo "<td><a href='details.php?creat=$separe[0]'><img src='$chemin' width='100px'></a></td>";
+              echo "<td><a class='tlink' href='individual.php?creature=$separe[0]#Table'><img src='$chemin' width='100px'></a></td>";
               echo "</tr>";
           }
         }

@@ -2,6 +2,7 @@
 <html> 
   <head>
       <meta charset="utf-8"/>
+      <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <title>Suppression
     </title>
@@ -16,20 +17,21 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Creatures</a>
         </li>
-        <li><a id="Contribute" >Gestion</a>
+
+        <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
-            <li><a id="sub" href="#">Modifier</a><li>
-            <li><a id="sub" href="delete.php">Supprimer</a><li>
+            <li><a id="sub" href="modif.php#Tableau">Modifier</a><li>
+            <li><a id="sub" href="delete.php#Tableau">Supprimer</a><li>
           </ul>
         </li>
       </ul>
       </nav>
 <table id="Tableau">
         <tr>
-          <th class="table">ID
+        <th class="table">id
           </th>
           <th class="table">Nom
           </th>
@@ -37,26 +39,22 @@
           </th>
           <th class="table">image
           </th>
-          <th id="delete">delete
+          <th id="delete">Supprimer
           </th>
         </tr>
 <?php
 $rep_txt = "./txt";
 $rep_img = "./img";
 if (isset($_POST['supp'])){
-                if (file_exists($rep_txt."/".$_POST['supp'].".txt")){
-                  $view = fopen($rep_txt."/".$_POST['supp'].".txt","a");
-                  // unlink ($rep_txt."/".$_POST['supp'].".txt");
-                  // unlink ($rep_img."/".$_POST['supp'].".jpg");
-                  $separe[3]=0;
-                  fputs($view,$separe[3]);
-                  echo "votre créatures a bien été supprimée";
+                if (file_exists($rep_txt."/".$_POST['supp'].".txt") AND file_exists($rep_img."/".$_POST['supp'].".jpg")){
+                  unlink ($rep_txt."/".$_POST['supp'].".txt");
+                  unlink ($rep_img."/".$_POST['supp'].".jpg");
+                    echo "la créature a bien été supprimé";
                 }
-                fclose($view);
 }
+
 if ($dir_txt = opendir($rep_txt)) {
-    
-    echo "<br>";
+
     while ($filename = readdir($dir_txt)) {
         if ($filename != "." && $filename != "..") {
             $tableau = array();
@@ -65,20 +63,19 @@ if ($dir_txt = opendir($rep_txt)) {
             while (!feof($file)) {
                 $line                = fgets($file);
                 $separe              = explode("*%", $line);
-                //$tableau[$separe[0]] = $separe[1];
+
             }
             fclose($file);
-            echo "<tr>";
-           if ($separe[3] == 1){
-              for ($i=0; $i <3 ; $i++) { 
-                echo "<td>".$separe[$i]."</td>";
-              }
 
-              $chemin =$rep_img."/".$separe[0].".JPG";
-              echo "<td><img src='$chemin' width='100px'></td>";
-              echo "<form action='delete.php' method='post' name='delete'><td><button type='submit' name='supp' value='$separe[0]'>
-              <img src='delete.png' alt='' height='42' width='42'></button></td></form>";
-              echo "</tr>";
+            $id = $separe[0];
+            echo "<tr>";
+            if ($separe[3] == 1){
+              for ($i=0; $i <3 ; $i++) { 
+                echo "<td><a class='tlink' href='individual.php?creature=$separe[0]#Table'>".$separe[$i]."</a></td>";
+              }
+            echo "<td><img src=" . $rep_img . '/' . $id . ".JPG width='100px' ></td>";
+            echo "<form action='delete.php' method='post' name='delete'><td><button class='button1' type='submit' name='supp' value='$id'><img src='delete.png' alt='' height='42' width='42'></button></td></form>";
+            echo "</tr>";
             }
         }
     }
@@ -91,5 +88,4 @@ if ($dir_txt = opendir($rep_txt)) {
 <p id="Copyright">Ont contribués : <cite>GUILLAUME Anais, FALCETTA Nicolas et QEDIRA Fares</cite> (RAN 1-3)</p>
 <a id="up" href="#logo">Haut de Page</a>
 </footer>
-
 </html>
