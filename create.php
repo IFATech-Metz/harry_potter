@@ -64,7 +64,11 @@ $desc = $_POST['desc'];
 // si le fichier n'existe pas
     else{
         if (!(in_array($extensionFichier, $extensionsAutorisees))) {
-                                echo "Le fichier n'a pas l'extension attendue, jpeg ou jpg";  
+                                echo "<script>
+                                    window.onload = function(){
+                                      alert('Le fichier n'a pas l'extension attendue, jpeg ou jpg');
+                                    }
+                                  </script>";
         }
         else { // Copie dans le repertoire img avec un nom                                
                                 $repertoireDestination = dirname(__FILE__)."/img/";
