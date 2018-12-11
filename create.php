@@ -44,6 +44,8 @@
 <?php
 
 if (isset($_POST["submit1"])) {
+str_replace("\n",' 
+',$_POST['desc']); 
 $nomOrigine = $_FILES['monfichier']['name'];
 $elementsChemin = pathinfo($nomOrigine);
 $extensionFichier = $elementsChemin['extension'];
