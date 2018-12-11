@@ -17,20 +17,20 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Créatures</a>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Creatures</a>
         </li>
 
         <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Créer</a><li>
-            <li><a id="sub" href="modif.php">Modifier</a><li>
-            <li><a id="sub" href="delete.php">Supprimer</a><li>
+            <li><a id="sub" href="modif.php#Tableau">Modifier</a><li>
+            <li><a id="sub" href="delete.php#Tableau">Supprimer</a><li>
           </ul>
         </li>
       </ul>
       </nav>
     </main>
-    <table>
+    <table id="Tableau">
       <tr>
           <th class="table">ID
           </th>
@@ -62,11 +62,10 @@
             }
             fclose($file);
             echo "<tr>";
-            if ($separe[3] == 1){
-              for ($i=0; $i <3 ; $i++) { 
+            if ($separe[2]==1){
+              for ($i=0; $i <=2 ; $i++) { 
                 echo "<td>".$separe[$i]."</td>";
               }
-
               $chemin =$rep_img."/".$separe[0].".JPG";
               echo "<td><img src='$chemin' width='100px'></td>";
               echo "<td><a class='tlink' href='modify-form.php?creature=$separe[0]#Table'><img src='./modifier.png' width='42px'></td>";
@@ -75,7 +74,6 @@
         }
     }
 }
-
 ?>
         </table>
     </main>

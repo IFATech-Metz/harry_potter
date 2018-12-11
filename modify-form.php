@@ -41,25 +41,10 @@ $id = $_GET['creature'];
 $rep_txt = "./txt";
 $rep_img = "./img";
 $chemin = $rep_img . "/" . $id . ".jpg";
-$colonne = explode('*%', $line);
-        
-if (isset($_POST['mod'])){
 
-    $filetxt=fopen($rep_txt."/". $id.".txt","w");
-    $holder=$colonne[0]."*%".$_POST['nom']."*%".$_POST["description"]."*%1";  
-    fwrite($filetxt,$holder);
-    echo "votre créature".$colonne[1]." à bien été modifier";
-    fclose($filetxt);
-    
-}
-
-  $file = fopen($rep_txt . "/" . $id . ".txt", "r") or die("Erreur de l'ouverture du fichier texte");
-
-    while (($line = fgets($file)) != false) {
-        $colonne = explode('*%', $line);
-        
-
-
+     $file= fopen($rep_txt . "/" . $id . ".txt", "r") or die("Erreur de l'ouverture du fichier texte");
+     while (($line = fgets($file)) != false) {
+     $colonne= explode('*%', $line);
     
         echo "<tr>";
         echo "<td class='Table'>" . $colonne[1] . "</td>";
@@ -73,9 +58,21 @@ if (isset($_POST['mod'])){
         echo "<td class='Table'><center><input type='submit' name='mod' class='button' value='Enregistrer les Modifications'><center></form></td>";
         echo "</tr>";
         
+
+if (isset($_POST['mod'])){
+
+    $filetxt=fopen($rep_txt."/". $id.".txt","w");
+    $holder= $separe[0]."*%".$_POST['nom']."*%".$_POST['description']."*%1";  
+    fwrite($filetxt,$holder);
+    echo "votre créature".$_POST['nom']." à bien été modifier";
+    fclose($filetxt);
+    
+    $image= $rep_img."/".$id.".jpg";
+      if ($image=="jpg")
+      
+    
+  }
 }
-
-
 
 ?>
     </table>
