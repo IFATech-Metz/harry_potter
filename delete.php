@@ -77,7 +77,7 @@ if ($dir_txt = opendir($rep_txt)) {
               $chemin =$rep_img."/".$separe[0].".JPG";
               echo "<td><img src='$chemin' width='100px'></td>";
               echo "<form action='delete.php' method='post' name='delete'><td><button type='submit' name='supp' value='$separe[0]'>
-              <img src='del.png' alt='' height='42' width='42'></button></td></form>";
+              <img src='delete.png' alt='' height='42' width='42'></button></td></form>";
               echo "</tr>";
             }
         }
