@@ -2,45 +2,48 @@
 <html> 
   <head>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
-    <title>Creatures des Mondes Magiques
-    </title>
+    <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
+    <title>Creatures des Mondes Magiques</title>
   </head>
   <body> 
     <main>
       <header>
         <div class="Titre">
-          <p><a id="logo" href="acceuil.php"><span class="hp">Harry Potter</span><br>Magical Creatures
+          <p><a id="logo" href="index.php"><span class="hp">Harry Potter</span><br>Magical Creatures
           </p>
         </div>
       </header>
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Creatures</a>
+        <li><a id="Contribute">Gestion</a>
           <ul>
-            <li><a id="sub" href="#">Ordre Croissant</a><li>
-            <li><a id="sub" href="#">Ordre Décroissantt</a><li>
-          </ul>
-        </li>
-
-        <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
-          <ul>
-            <li><a id="sub" href="#">Créer</a><li>
-            <li><a id="sub" href="#">Modifier</a><li>
-            <li><a id="sub" href="#">Supprimer</a><li>
+            <li><a id="sub" href="create.php">Créer</a><li>
+            <li><a id="sub" href="modif.php#Tableau">Modifier</a><li>
+            <li><a id="sub" href="delete.php#Tableau">Supprimer</a><li>
           </ul>
         </li>
       </ul>
       </nav>
-      <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque turpis augue, sed tempor lacus bibendum tristique. Nulla a faucibus quam. Morbi vitae consequat lorem. Sed sodales tempor mauris, vitae feugiat nibh venenatis non. Pellentesque fermentum interdum magna ac vulputate. Maecenas efficitur lectus convallis dui mattis, quis scelerisque nisl tincidunt. Nulla nec tortor vehicula, auctor lacus et, convallis nisl. Nullam sit amet quam vel mi pharetra molestie. Donec vehicula, lorem non ornare eleifend, odio tortor egestas nisl, a blandit enim lorem quis risus.
+      <p id="text">
+      Quand Harry Potter était bébé, un personnage méchant et cruel avait le pouvoir sur les sorciers.
+      <br> C'était l'affreux V... euh...Voldemort. Peu de gens osent prononcer son nom ! Il tua Lily et James Potter, les parents de Harry. 
+      <br> Mais quand il essaya de tuer celui-ci, il perdit ses pouvoirs et se volatilisa. 
+      <br> Harry garda alors pour toujours sur le front une cicatrice en forme d'éclair, seule trace du mauvais sort lancé contre lui. 
+      <br> Des personnages étranges déposèrent l'orphelin sur le perron des Dursley (son oncle, sa tante et son cousin) qui étaient des simples "Moldus", c'est-à-dire des gens dépourvus de pouvoirs magiques. 
+      <br> Ces derniers, pendant onze ans, cachèrent à Harry qu'il était du monde des sorciers et ils lui racontèrent que ses parents avaient été tués par un accident de voiture.
 
-Phasellus tempor dolor enim, id malesuada metus dignissim a. Sed eget aliquet metus. Duis molestie odio tincidunt nunc cursus, a malesuada lectus tincidunt. Proin tortor massa, tincidunt nec vulputate ac, malesuada vel ante. Vestibulum in risus lobortis erat tempus porta nec vitae dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer ac viverra arcu. Integer dapibus libero augue, sed pellentesque ante placerat et. Vivamus ac faucibus leo, vitae congue sem. Morbi porttitor ligula a augue rhoncus tempor.
+      <br> Un jour, Harry reçut une lettre. 
+      <br> Mais l'oncle Vernon la lui arracha des mains. 
+      <br> Harry entendit alors ce dernier et la tante Pétunia marmonner des phrases comme : "Que faut-il faire ? Leur répondre ? Leur dire que nous ne voulons pas..." Le lendemain, une autre lettre arriva. Vernon les détruisit. 
+      <br> Les mystérieux expéditeurs envoyèrent alors de plus en plus de lettres.
 
-Donec sagittis nisi ac aliquam convallis. Praesent vestibulum at dui sit amet porta. Vestibulum et placerat ipsum. Pellentesque sit amet sapien tincidunt, euismod massa eget, bibendum lacus. Mauris a ligula vitae massa blandit interdum quis nec sapien. Duis mattis purus molestie, elementum nibh id, maximus nunc. Nullam non viverra est. Cras faucibus risus ac metus malesuada gravida. Integer vitae aliquam augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Nullam laoreet sit amet urna at condimentum. Pellentesque ex quam, iaculis nec interdum sit amet, cursus sit amet ex. Sed laoreet rhoncus odio quis malesuada. Cras eleifend id tortor id rhoncus. Phasellus ultricies orci dapibus risus fermentum, in maximus metus efficitur. Maecenas laoreet gravida tellus. Nunc justo purus, volutpat eget sodales sit amet, sagittis vitae est. Aenean finibus ipsum orci, et eleifend odio sodales in. Aliquam pharetra nisl in nibh consequat tristique eu sit amet diam. Ut gravida lorem felis, vel faucibus massa viverra et. Morbi porttitor ante id lorem porttitor, in pharetra leo ultrices. Sed ac nunc ut erat ultricies interdum. Sed varius blandit ipsum, nec mollis dui congue et. Mauris sagittis massa eu ante cursus faucibus. Vivamus posuere ut lectus eu facilisis.
-
-Curabitur pretium felis in suscipit pulvinar. Vestibulum eu hendrerit ante. Etiam tincidunt vitae nisl ac pulvinar. Nulla felis magna, vehicula dictum facilisis ut, laoreet sit amet urna. Praesent vestibulum, metus porttitor euismod finibus, ex leo tempus augue, at lacinia urna mauris quis velit. In nec pretium nulla, quis volutpat urna. Nulla id sapien eu dolor pharetra tempus. Sed placerat sit amet turpis et egestas. In sit amet dolor a odio lacinia egestas eget in dolor.</p>
+      C'est à partir de ces évènements que Harry va découvrir la vérité sur ses parents et rejoindre la fameuse école de Poudlard pour y apprendre la sorcellerie. Il va aussi y pratiquer le Quidditch, le sport des sorciers. Harrypotter à l'école de sorcière c'est la première fois qu'il voila les 
+      les animaux les plus magiques, les plus fantastiques du monde magique. Mais aussi les plus dangereuses. Durant tous c'est année de soclarité à Pollard harry en affronta pas de c'est creatures qui nous fascine tant c'est jours-ci tel que les vampires, des araignée géante, des starangulos.... Je vous presente un catalogue harry potter ou vous pouvez ajouter, supprimer, modifier, a votre guise. Dans ce catalogue vous pouvez 
+      mettre autant de creature magique que vous aimer supprimer ceux donc vous ne desirait point qui vous repugne.
+      Harry Potter, un monde magique incontournable par les jeunes comme par les adultes.</p>
+    
       </nav>
     </main>
   </body>

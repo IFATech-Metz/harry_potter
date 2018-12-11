@@ -4,7 +4,7 @@
       <meta charset="utf-8"/>
       <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
-    <title>Suppression
+    <title>Creatures des Mondes Magiques
     </title>
   </head>
   <body> 
@@ -17,8 +17,7 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Creatures</a>
-        </li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Creatures</a></li>
 
         <li><a id="Contribute">Gestion</a>
           <ul>
@@ -31,7 +30,7 @@
       </nav>
 <table id="Tableau">
         <tr>
-        <th class="table">id
+          <th class="table">ID
           </th>
           <th class="table">Nom
           </th>
@@ -39,26 +38,13 @@
           </th>
           <th class="table">image
           </th>
-          <th id="delete">Supprimer
-          </th>
         </tr>
 <?php
 $rep_txt = "./txt";
 $rep_img = "./img";
-if (isset($_POST['supp'])){
-                if (file_exists($rep_txt."/".$_POST['supp'].".txt") AND file_exists($rep_img."/".$_POST['supp'].".jpg")){
-                  unlink ($rep_txt."/".$_POST['supp'].".txt");
-                  unlink ($rep_img."/".$_POST['supp'].".jpg");
-                    echo "<script>
-                    window.onload = function(){
-                      alert('La suppression à bien été effectuée .');
-                    }
-                  </script>" ;
-                }
-}
 
 if ($dir_txt = opendir($rep_txt)) {
-
+    
     while ($filename = readdir($dir_txt)) {
         if ($filename != "." && $filename != "..") {
             $tableau = array();
@@ -67,23 +53,23 @@ if ($dir_txt = opendir($rep_txt)) {
             while (!feof($file)) {
                 $line                = fgets($file);
                 $separe              = explode("*%", $line);
-
+                //$tableau[$separe[0]] = $separe[1];
             }
             fclose($file);
-
-            $id = $separe[0];
             echo "<tr>";
             if ($separe[3] == 1){
               for ($i=0; $i <3 ; $i++) { 
                 echo "<td><a class='tlink' href='individual.php?creature=$separe[0]#Table'>".$separe[$i]."</a></td>";
               }
-            echo "<td><img src=" . $rep_img . '/' . $id . ".JPG width='100px' ></td>";
-            echo "<form action='delete.php' method='post' name='delete'><td><button class='button1' type='submit' name='supp' value='$id'><img src='delete.png' alt='' height='42' width='42'></button></td></form>";
-            echo "</tr>";
-            }
+
+              $chemin =$rep_img."/".$separe[0].".JPG";
+              echo "<td><a class='tlink' href='individual.php?creature=$separe[0]#Table'><img src='$chemin' width='100px'></a></td>";
+              echo "</tr>";
+          }
         }
     }
 }
+
 ?>
       </table>
     </main>

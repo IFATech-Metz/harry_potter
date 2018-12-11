@@ -1,6 +1,7 @@
 <!Doctype html>
 <html> 
   <head>
+  <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <title>Creatures des Mondes Magiques
     </title>
@@ -16,18 +17,30 @@
       <nav>
       <ul class="Menu">
         <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Creatures</a></li>
 
-        <li><a id="Contribute" href="Contribute.php?#htext">Gestion</a>
+        <li><a id="Contribute">Gestion</a>
           <ul>
             <li><a id="sub" href="create.php">Creer</a><li>
-            <li><a id="sub" href="modif.php">Modifier</a><li>
-            <li><a id="sub" href="delete.php">Supprimer</a><li>
+            <li><a id="sub" href="modif.php#Tableau">Modifier</a><li>
+            <li><a id="sub" href="delete.php#Tableau">Supprimer</a><li>
           </ul>
         </li>
       </ul>
       </nav>
       <table>
+      <thead>
+      <tr>
+          <th class="table">ID
+          </th>
+          <th class="table">Nom
+          </th>
+          <th class="table">Description
+          </th>
+          <th class="table">image
+          </th>
+        </tr>
+      </thead>
         <tbody>
 <?php
 $id = $_GET['creature'];
@@ -39,16 +52,10 @@ $file = fopen($rep_txt."/".$id.".txt","r") or die("Erreur de l'ouverture du fich
 
 while(($line = fgets($file)) != false) {
     $colonne = explode('*%',$line);
-
     echo "<tr>";
-    echo "<td class='Table'>". $colonne[1]."</td>";
-    echo "</tr>";
-
-    echo "<tr>";
-    echo "<td class='Table'>". $colonne[2]."</td>";
-    echo "</tr>";
-
-    echo "<tr>";
+for($i = 0; $i <= 2; $i++){
+    echo "<td class='Table'>". $colonne[$i]."</td>";
+  }
     echo "<td><center><img src='$chemin' width='200px'><center></td>";
     echo "</tr>";
 }
