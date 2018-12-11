@@ -49,7 +49,11 @@ if (isset($_POST['supp'])){
                 if (file_exists($rep_txt."/".$_POST['supp'].".txt") AND file_exists($rep_img."/".$_POST['supp'].".jpg")){
                   unlink ($rep_txt."/".$_POST['supp'].".txt");
                   unlink ($rep_img."/".$_POST['supp'].".jpg");
-                    echo "la créature a bien été supprimé";
+                    echo "<script>
+                    window.onload = function(){
+                      alert('La suppression à bien été effectuée .');
+                    }
+                  </script>" ;;
                 }
 }
 
