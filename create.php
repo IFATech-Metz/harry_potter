@@ -76,14 +76,14 @@ $desc = $_POST['desc'];
                                     fwrite($text,$contenu);                                                              //creation du fichier txt
                                     echo "<script>
                                     window.onload = function(){
-                                      alert('La création à bien été effectuée .');
+                                      alert('La création à bien été effectuée');
                                     }
                                   </script>";                //confirmation de l'ajout
                                 }
                                 else {
                                     echo "<script>
                                     window.onload = function(){
-                                      alert('Le fichier n'a pas été uploadé (trop gros ?) ou le déplacement du fichier temporaire a échoué, vérifiez l'existence du répertoire ". $repertoireDestination ."');
+                                      alert('Le fichier n'a pas été uploadé (trop gros ?) ou le déplacement du fichier temporaire a échoué, vérifiez l'existence du répertoire');
                                     }
                                   </script>";
                                    
