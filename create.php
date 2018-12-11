@@ -54,7 +54,7 @@ $count = count(glob("txt/*.txt"));
 $id = $count + 1;
 $filename = './img/'.$id.'.jpg';
 $beastname = $_POST['nom'];
-$desc = $_POST['desc'];
+$desc = str_replace(array("\r\n", "\n", "\r"), " ", $_POST['desc']);
 
 
 // si le fichier existe dans le dossier img 
