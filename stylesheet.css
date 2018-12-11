@@ -72,11 +72,12 @@ body{
     background-attachment: FIXED;
 }
 #text{
-    margin-bottom: 15%;
+    margin: 20%;
     font-family: 'ClementineExtraFine';
     text-align: justify;
     font-size: 200%;
     color: white;
+    text-shadow: 1px 2px 30px black;
 }
 #htext{
     margin-top: 500px;

@@ -1,74 +1,79 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <link rel="icon" href="https://www.favicon.cc/logo3d/799742.png" />
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
-    <title>Creatures des Mondes Magiques
-    </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>détails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
+    <script src="main.js"></script>
 </head>
 <body>
-<main>
-    <header>
-        <div class="Titre">
-            <p><a id="logo" href="index.php"><span class="hp">Harry Potter</span><br>Magical Creatures</p>
-        </div>
-    </header>
-    <nav>
-        <ul class="Menu">
-            <li><a id="AboutUs" href="index.php">Acceuil</a></li>
-            <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a></li>
 
-            <li><a id="Contribute">Gestion</a>
-                <ul>
-                    <li><a id="sub" href="create.php">Créer</a><li>
-                    <li><a id="sub" href="modif.php">Modifier</a><li>
-                    <li><a id="sub" href="delete.php">Supprimer</a><li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    <table id="Tableau">
-        <tr>
-            <th class="table">Nom
-            </th>
-            <th class="table">Description
-            </th>
-            <th class="table">image
-            </th>
-            <th>
-            </th>
-        </tr>
-<?php
+      <nav>
+      <ul class="Menu">
+        <li><a id="AboutUs" href="index.php">Acceuil</a></li>
+        <li><a id="Table" href="harrypotter.php?#Tableau">Liste</a>
+        </li>
+        <li><a id="Contribute" >Gestion</a>
+          <ul>
+            <li><a id="sub" href="create.php">Créer</a><li>
+            <li><a id="sub" href="modif.php">Modifier</a><li>
+            <li><a id="sub" href="delete.php">Supprimer</a><li>
+          </ul>
+        </li>
+      </ul>
+      </nav><br>
+        <?php
+$rep_txt = "./txt/";
+$rep_img = "./img/";
 
-$id = $_GET['creature'];
-$rep_txt = "./txt";
-$rep_img = "./img";
-$chemin = $rep_img . "/" . $id . ".jpg";
-$file = fopen($rep_txt . "/" . $id . ".txt", "r") or die("Erreur de l'ouverture du fichier texte");
+if(isset($_POST["modif"])){
+    $path = $rep_txt.$_GET["creat"].".txt";
+    $id = $_POST["id"];
+    $nom = $_POST["nom"];
+    $description = $_POST["description"];
+    $file = fopen($path,"w");
+    $contenu = $id."*%".$nom."*%".$description."*%1";
+    fwrite($file,$contenu);
+    echo '<script>
+        window.onload = function(){
+          alert("La modification à bien été effectuée .");
+        }
+      </script>';
+    }
 
-    while (($line = fgets($file)) != false) {
-        $colonne = explode('*%', $line);
-    
-        echo "<tr>";
-        echo "<td class='Table'>" . $colonne[1] . "</td>";
-        echo "<td class='Table'>" . $colonne[2] . "</td>";
-        echo "<td><img src='$chemin' width='200px'></td>";
-        echo "</tr>";
-
-        echo "<tr>";
-        echo "<form name='modify-form' action='modify-form.php?creature=$_GET[creature]'id='modif-form'method=POST><td class='Table'><center><textarea name='nom' form='modif-form' rows='5' cols='15'>".$colonne[1]."</textarea><center></td>";
-        echo "<td class='Table'><center><textarea name='description' form='modif-form' width='50px' rows='5' cols='100'>".$colonne[2]."</textarea><center></td>";
-        echo "<td class='Table'><center><input type='submit' name='mod' class='button' value='Enregistrer les Modifications'><center></form></td>";
-        echo "</tr>";
-        
-}
-
-
-
+    if (isset($_GET["creat"])){
+        $path = $rep_txt.$_GET["creat"].".txt";
+        $file = fopen($path,"r");
+            while (!feof($file)) {
+            $line                = fgets($file);
+            $separe              = explode("*%", $line);
+            }
+        fclose($file);
+    }
 ?>
-    </table>
-</main>
+        
+        <table id="Tableau">
+            <tr>
+                <th class="table">Nom</th>
+                <th class="table">Description</th>
+                <th class="table">image</th>
+            </tr>
+            <tr>
+                <td><?php echo $separe[1]; ?></td>
+                <td><?php echo $separe[2]; ?></td>
+                <td><center><?php echo "<img src='img/$separe[0].jpg' widht='300px' height='300px'>" ?></center></td>
+            </tr>
+            <tr>
+                <form action="modify-form.php?creat=<?php echo $_GET['creat'];?>#Tableau" method=post>
+                                            <input type="text" name="id" value="<?php echo $separe[0]; ?>" hidden>
+                    <td class='Table'><center><textarea name="nom" rows='5' cols='15' required><?php echo $separe[1]; ?></textarea></center></td>
+                    <td class='Table'><center><textarea name="description" cols="100" rows="5" required><?php echo $separe[2]; ?></textarea></center></td>
+                    <td class='Table'><center><input type="submit" name="modif" class="button"  value="Enregistrer"></center></td>
+                </form>
+            </tr>
+        </table>
 </body>
 <footer id="Footer">
     <p id="Copyright">Ont contribués : <cite>GUILLAUME Anais, FALCETTA Nicolas et QEDIRA Fares</cite> (RAN 1-3)</p>
