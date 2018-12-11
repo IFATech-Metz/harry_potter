@@ -36,6 +36,8 @@
             </th>
             <th class="table">image
             </th>
+            <th>
+            </th>
         </tr>
 <?php
 
